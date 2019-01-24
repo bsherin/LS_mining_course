@@ -1,3 +1,8 @@
+## things to fix in the notebook 11
+- import nltk
+- copy over the function `norm_vec` from notebook 10
+- import numpy as np
+
 # For week 3
 
 You want notebooks 8, 9, 10, and 11. Put those in your LS_mining_course folder.
