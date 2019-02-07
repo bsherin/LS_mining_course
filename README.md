@@ -1,7 +1,17 @@
-## things to fix in the notebook 11
-- import nltk
-- copy over the function `norm_vec` from notebook 10
-- import numpy as np
+# For week 4
+
+You want notebooks 12-16. You can also grab my version of last week's solo work.
+
+The new corpus files are:
+
+* male.txt
+* female.txt
+* pizza.csv
+* tekno_flat.csv
+
+Grab the images folder and it's contents.
+
+Also the new pdfs.
 
 # For week 3
 
