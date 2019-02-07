@@ -1,13 +1,17 @@
 # For week 4
 
-You want notebooks 12-16. You can also grab my version of last week's solo work.
+You want **notebooks 12-16**. 
 
-The new corpus files are:
+You can also grab my version of last week's solo work, if you're interested. It's **11 - Solo word 3-BS.ipynb**
 
+The new **corpus files** for this week are:
+
+**
 * male.txt
 * female.txt
 * pizza.csv
 * tekno_flat.csv
+**
 
 Grab the images folder and it's contents.
 
