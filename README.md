@@ -6,19 +6,17 @@ You can also grab my version of last week's solo work, if you're interested. It'
 
 The new **corpus files** for this week are:
 
-**
 * male.txt
 * female.txt
 * pizza.csv
 * tekno_flat.csv
-**
 
-Grab the images folder and it's contents.
+Grab the **images folder** and it's contents.
 
-Two journal articles.
+Grab two **journal articles** I uploaded, if you're interested.
 
 * Landauer (an introduction to LSA)
-* Kersting (an article about Tekno)
+* Kersting (an article about Tekno, which is the project associated with a corpus you'll work with)
 
 # For week 3
 
