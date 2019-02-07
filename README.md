@@ -11,7 +11,10 @@ The new corpus files are:
 
 Grab the images folder and it's contents.
 
-Also the new pdfs.
+Two journal articles.
+
+* Landauer (an introduction to LSA)
+* Kersting (an article about Tekno)
 
 # For week 3
 
