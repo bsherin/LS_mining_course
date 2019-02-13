@@ -2,13 +2,13 @@
 
 There is a new numbering scheme for notebooks. You want all of the notebooks that start with **W5**.
 
-In the **corpora** folder you should grab:
+From the **corpora** folder you should grab these folders:
 
-The folders:
 * bernstein_all
 * encoding_test_files
 
-The files
+And these files:
+
 * mtms2008-09-122a.pdf
 * tekno_fractions_nona.xlsx
 * single_arg_page.html
