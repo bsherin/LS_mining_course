@@ -1,3 +1,18 @@
+# For week 5
+
+There is a new numbering scheme for notebooks. You want all of the notebooks that start with **W5**.
+
+In the **corpora** folder you should grab:
+
+The folders:
+* bernstein_all
+* encoding_test_files
+
+The files
+* mtms2008-09-122a.pdf
+* tekno_fractions_nona.xlsx
+* single_arg_page.html
+
 # For week 4
 
 You want **notebooks 12-16**. 
