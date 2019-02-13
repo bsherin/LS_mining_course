@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html class="no-js" ng-app="tchApp" lang="en" dir="ltr">
+<head>
+  <!--[if IE]><![endif]-->
+<link rel="dns-prefetch" href="//cdn.ckeditor.com" />
+<link rel="preconnect" href="//cdn.ckeditor.com" />
+<link rel="preconnect" href="//content.jwplatform.com" />
+<link rel="dns-prefetch" href="//content.jwplatform.com" />
+<link rel="preconnect" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="preconnect" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="preconnect" href="//stats.g.doubleclick.net" />
+<link rel="dns-prefetch" href="//stats.g.doubleclick.net" />
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta http-equiv="cleartype" content="on" />
+<link rel="shortcut icon" href="https://www.teachingchannel.org/sites/all/themes/sloth/favicon.ico" type="image/vnd.microsoft.icon" />
+<base href="/teams/149481/discussions/272606/" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M9FXR4');</script>
+<!-- End Google Tag Manager --><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="canonical" href="https://www.teachingchannel.org/teams/149481/discussions/272606" />
+<link rel="shortlink" href="https://www.teachingchannel.org/teams/149481/discussions/272606" />
+<meta property="og:site_name" content="Teaching Channel" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.teachingchannel.org/teams/149481/discussions/272606" />
+<meta property="og:title" content="Chicago Area Argumentation in Mathematics Course Discussion" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@teachingchannel" />
+<meta name="twitter:site:id" content="194378740" />
+<meta name="twitter:url" content="https://www.teachingchannel.org/teams/149481/discussions/272606" />
+<meta name="twitter:title" content="Chicago Area Argumentation in Mathematics Course Discussion" />
+<meta itemprop="name" content="Chicago Area Argumentation in Mathematics Course Discussion" />
+<script type="text/javascript">
+    var dfp_slots = new Array();
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    googletag.slots = googletag.slots || {};
+
+    googletag.cmd.push(function() {
+      googletag.pubads().enableAsyncRendering();
+      googletag.pubads().collapseEmptyDivs();
+      googletag.pubads().disableInitialLoad();
+      googletag.enableServices();
+    });
+  </script>
+    <title>Chicago Area Argumentation in Mathematics Course Discussion | Teaching Channel</title>
+  <link type="text/css" rel="stylesheet" href="/sites/default/files/advagg_css/css__zEtNwUu9MaBwPq3JhYABsUEb8zJetUS42Q04qTPWDcc__wUr2GCCXq5CGuNFk2jmV52iytGLjUd7dn7guJp7QOB0__oQYHT4KO3jC4DGNzCtRJAUYZzwWpmvEPa_CbUdU1VkI.css" media="all" />
+<link type="text/css" rel="stylesheet" href="/sites/default/files/advagg_css/css__yLPJyDd55ywWYD57Q4jBQ6z3VRN0vupnpx7pBoPBe8E__wmXh-ZXkPaw6cmiFgsrZ4dk8Jko6KxU7HBDH9-rpgnk__oQYHT4KO3jC4DGNzCtRJAUYZzwWpmvEPa_CbUdU1VkI.css" media="all" />
+<link type="text/css" rel="stylesheet" href="/sites/default/files/advagg_css/css__EDNRsPTnsjQ6kMHbSR3wEP7uvoH-o0b7bKgPw7T-IOQ__YoP2Jny20QRnaEkay7opgWkuboER_4ggJISv0YWVzqQ__oQYHT4KO3jC4DGNzCtRJAUYZzwWpmvEPa_CbUdU1VkI.css" media="all" />
+<link type="text/css" rel="stylesheet" href="/sites/default/files/advagg_css/css__TQpiFr3HNLUKXAlaZskF5q-xKgM7zm7Fi9FD2SWRCX0__jBmSArfF0KiXCRTYG5nizBtgCmAMeLcmsNU5J4npnaU__oQYHT4KO3jC4DGNzCtRJAUYZzwWpmvEPa_CbUdU1VkI.css" media="all" />
+<link type="text/css" rel="stylesheet" href="/sites/default/files/advagg_css/css__UZ6AQg8TkQcbVAjcxNth4PUa8ZsPRmm0awZ1AtBnScc__oIT8cFIEspUMCzl9no00xJHUluzFV17RlEVnJyzw6Pw__oQYHT4KO3jC4DGNzCtRJAUYZzwWpmvEPa_CbUdU1VkI.css" media="all" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='/sites/all/modules/contrib/jquery_update/replace/jquery/2.2/jquery.min.js'>\x3C/script>")</script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+<script>window.jQuery.ui || document.write("<script src='/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery-ui.min.js'>\x3C/script>")</script>
+<script src="//content.jwplatform.com/libraries/zw0ElHAr.js"></script>
+<script src="/sites/default/files/advagg_js/js__y8sLEOf0tE1Dab7vZ9c62LPn6iAhWz1cqoPQ8QKlqaw__ajklEX_8KJbzijHtkn1qfV-fpD5IikWMNyQP9nM-H6A__oQYHT4KO3jC4DGNzCtRJAUYZzwWpmvEPa_CbUdU1VkI.js"></script>
+<script src="/sites/default/files/advagg_js/js__6xRpGyIKXE47tt3vHGkwPnJwKn7ntEKViIN0B7c0mJk__IcEJhLplPHZKp4wsHkd7uuYZjCmY9Fs_lmXXkTAckmI__oQYHT4KO3jC4DGNzCtRJAUYZzwWpmvEPa_CbUdU1VkI.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-sanitize.min.js"></script>
+<script src="/sites/default/files/advagg_js/js__0ND-xcQV2qlww4U8YfZCGrrN9UITQU8l-gQD5BKc1qM__Cqjl6HpDDMp-1-c2nPEMITAsCZYOdQDPeV5RPV150fA__oQYHT4KO3jC4DGNzCtRJAUYZzwWpmvEPa_CbUdU1VkI.js"></script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-21493204-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<script>jQuery.extend(Drupal.settings,{"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"sloth","theme_token":"ZGe2SQMhmoercVmUDxWyGS5Rbt2pINx8r0oEzOpKtj4","jquery_version":"2.2","css":{"modules\/system\/system.base.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.button.css":1,"misc\/ui\/jquery.ui.resizable.css":1,"misc\/ui\/jquery.ui.dialog.css":1,"sites\/all\/modules\/contrib\/media\/css\/media.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/logintoboggan\/logintoboggan.css":1,"sites\/all\/modules\/custom\/st_comment\/st_comment.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/media\/modules\/media_wysiwyg\/css\/media_wysiwyg.base.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/libraries\/jquery-ui-multiselect-widget\/jquery.multiselect.css":1,"sites\/all\/libraries\/jquery-ui-multiselect-widget\/jquery.multiselect.filter.css":1,"sites\/all\/modules\/contrib\/jquery_ui_multiselect_widget\/jquery_ui_multiselect_widget.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/modules\/contrib\/flag\/theme\/flag.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.editor.css":1,"sites\/all\/themes\/sloth\/css\/sloth.css":1},"js":{"\/\/cdn.ckeditor.com\/4.9.1\/full-all\/ckeditor.js":1,"sites\/all\/modules\/contrib\/apachesolr_sort\/apachesolr_sort.js":1,"sites\/all\/modules\/contrib\/dfp\/js\/jquery.googletag.js":1,"sites\/all\/modules\/contrib\/linkit\/js\/linkit.js":1,"sites\/all\/modules\/contrib\/memcache\/memcache_admin\/memcache.js":1,"misc\/progress.js":1,"sites\/all\/modules\/contrib\/ctools\/js\/modal.js":1,"sites\/all\/modules\/contrib\/flag\/theme\/flag.js":1,"sites\/all\/modules\/contrib\/views\/js\/base.js":1,"sites\/all\/modules\/custom\/st_base\/js\/st_base.angular.js":1,"sites\/all\/modules\/contrib\/views_show_more\/views_show_more.js":1,"sites\/all\/modules\/contrib\/views\/js\/ajax_view.js":1,"misc\/textarea.js":1,"sites\/all\/modules\/contrib\/linkit\/editors\/ckeditor\/linkitDialog.js":1,"sites\/all\/modules\/contrib\/media\/js\/media.popups.js":1,"modules\/filter\/filter.js":1,"sites\/all\/modules\/contrib\/media\/modules\/media_wysiwyg\/js\/media_wysiwyg.filter.js":1,"sites\/all\/modules\/custom\/st_comment\/ajax_comments.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"sites\/all\/modules\/custom\/st_resource\/js\/st_resource.helper.js":1,"sites\/all\/themes\/sloth\/vendor\/what-input\/dist\/what-input.min.js":1,"sites\/all\/themes\/sloth\/js\/library\/jquery_cookie.js":1,"sites\/all\/themes\/sloth\/js\/library\/dropkick.min.js":1,"sites\/all\/themes\/sloth\/js\/foundation.min.js":1,"sites\/all\/themes\/sloth\/scripts\/foundation.init.js":1,"sites\/all\/themes\/sloth\/js\/ctools\/modal.js":1,"sites\/all\/themes\/sloth\/js\/slick.min.js":1,"sites\/all\/themes\/sloth\/js\/global.js":1,"sites\/all\/themes\/sloth\/js\/ad\/st_dfp_ad.js":1,"sites\/all\/themes\/sloth\/js\/ad\/st_dfp_lazy_load.js":1,"sites\/all\/themes\/sloth\/js\/delete_confirm_popup.js":1,"sites\/all\/modules\/custom\/st_note\/js\/st_note.js":1,"sites\/all\/libraries\/jquery-ui-multiselect-widget\/src\/jquery.multiselect.js":1,"sites\/all\/libraries\/jquery-ui-multiselect-widget\/src\/jquery.multiselect.filter.js":1,"sites\/all\/modules\/contrib\/jquery_ui_multiselect_widget\/jquery_ui_multiselect_widget.js":1,"sites\/all\/modules\/contrib\/ckeditor\/includes\/ckeditor.utils.js":1,"sites\/all\/modules\/contrib\/media_ckeditor\/js\/plugins\/media\/library.js":1,"sites\/all\/libraries\/angular\/ng-file-upload\/ng-file-upload.min.js":1,"sites\/all\/themes\/sloth\/js\/angular_ui_sortable.js":1,"sites\/all\/modules\/custom\/st_base\/js\/angularjs_dropdown_multiselect.min.js":1,"sites\/all\/modules\/custom\/st_resource\/js\/st_resource.add.js":1,"sites\/all\/modules\/custom\/st_resource\/js\/st_existing_resource.add.js":1,"sites\/all\/modules\/custom\/st_resource\/js\/st_resource.tch_video.js":1,"sites\/all\/modules\/custom\/st_resource\/js\/st_resource.edit.js":1,"sites\/all\/modules\/custom\/st_resource\/js\/st_post_to_team.js":1,"sites\/all\/themes\/sloth\/js\/video.js":1,"sites\/all\/themes\/sloth\/scripts\/sticky-footer.js":1,"\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/2.2.4\/jquery.min.js":1,"\/\/ajax.googleapis.com\/ajax\/libs\/jqueryui\/1.10.2\/jquery-ui.min.js":1,"\/\/content.jwplatform.com\/libraries\/zw0ElHAr.js":1,"misc\/jquery.once.js":1,"sites\/all\/modules\/contrib\/dfp\/js\/dfp_googletag.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/media\/js\/media.core.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery.form\/4\/jquery.form.min.js":1,"https:\/\/ajax.googleapis.com\/ajax\/libs\/angularjs\/1.6.7\/angular.min.js":1,"https:\/\/ajax.googleapis.com\/ajax\/libs\/angularjs\/1.6.7\/angular-sanitize.min.js":1,"sites\/all\/modules\/contrib\/angularjs\/js\/angular_resource.js":1,"sites\/all\/modules\/contrib\/media\/js\/util\/json2.js":1,"sites\/all\/modules\/contrib\/media\/js\/util\/ba-debug.min.js":1,"misc\/form.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/contrib\/jquery_update\/js\/jquery_update.js":1}},"jquery_ui_multiselect_widget":{"module_path":"sites\/all\/modules\/contrib\/jquery_ui_multiselect_widget","multiple":1,"filter":0,"subselector":":not(.selectize)","selectedlist":"0","autoOpen":0,"header":1,"height":"175","classes":"","filter_auto_reset":0,"filter_width":"100","jquery_ui_multiselect_widget_path_match_exclude":"admin\/*\r\nmedia\/*\r\nfile\/*\r\nsystem\/ajax"},"st_dfp_ads":{"targeting_list":{"SECTION1":"teams"}},"CToolsModal":{"loadingText":"Loading...","closeText":"Close Window","closeImage":"\u003Cimg class=\u0022image-style-none\u0022 src=\u0022https:\/\/www.teachingchannel.org\/sites\/all\/modules\/contrib\/ctools\/images\/icon-close-window.png\u0022 alt=\u0022Close window\u0022 title=\u0022Close window\u0022 \/\u003E","throbber":"\u003Cimg class=\u0022image-style-none\u0022 src=\u0022https:\/\/www.teachingchannel.org\/sites\/all\/modules\/contrib\/ctools\/images\/throbber.gif\u0022 alt=\u0022Loading\u0022 title=\u0022Loading...\u0022 \/\u003E","animation":"fadeIn","modalOptions":{"opacity":"0.45","background":"#0a0a0a"},"modalSize":{"contentRight":0},"modalClass":"sloth"},"angularjsApp":{"restws_csrf_token":"UQXeITpvxenaBxuA7cgR5rcTQpossVQn6cyJ_waKc9E","basePath":"https:\/\/www.teachingchannel.org\/"},"urlIsAjaxTrusted":{"\/":true,"\/views\/ajax":true,"\/system\/ajax":true,"\/teams\/149481\/discussions\/272606":true},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:20b74bcf5780859780fdbdbeb31d42c3":{"view_name":"resources","view_display_id":"panel_pane_1","view_args":"1646","view_path":"teams\/149481\/discussions\/272606","view_base_path":null,"view_dom_id":"20b74bcf5780859780fdbdbeb31d42c3","pager_element":0},"views_dom_id:d094d6ef4fb122cc9a2d2c2ebd76719b":{"view_name":"tch_video","view_display_id":"panel_pane_1","view_args":"183866+183811+183851","view_path":"teams\/149481\/discussions\/272606","view_base_path":null,"view_dom_id":"d094d6ef4fb122cc9a2d2c2ebd76719b","pager_element":0}}},"better_exposed_filters":{"views":{"resources":{"displays":{"panel_pane_1":{"filters":{"combine":{"required":false}}}}},"tch_video":{"displays":{"panel_pane_1":{"filters":{"combine":{"required":false}}}}}}},"ckeditor":{"input_formats":{"filtered_html":{"customConfig":"\/sites\/all\/modules\/contrib\/ckeditor\/ckeditor.config.js?","defaultLanguage":"en","toolbar":"[\n    [\u0027Source\u0027],\n    [\u0027Cut\u0027,\u0027Copy\u0027,\u0027Paste\u0027,\u0027PasteText\u0027,\u0027PasteFromWord\u0027,\u0027Find\u0027],\n    [\u0027Image\u0027,\u0027Media\u0027,\u0027Table\u0027,\u0027HorizontalRule\u0027],\n    [\u0027JustifyLeft\u0027,\u0027JustifyCenter\u0027,\u0027JustifyRight\u0027,\u0027JustifyBlock\u0027,\u0027linkit\u0027],\n    \u0027\/\u0027,\n    [\u0027Format\u0027],\n    [\u0027Bold\u0027,\u0027Italic\u0027,\u0027Underline\u0027,\u0027TextColor\u0027,\u0027BGColor\u0027,\u0027Strike\u0027,\u0027RemoveFormat\u0027],\n    [\u0027NumberedList\u0027,\u0027BulletedList\u0027,\u0027-\u0027,\u0027Blockquote\u0027],\n    [\u0027Link\u0027,\u0027Unlink\u0027,\u0027Anchor\u0027]\n]","enterMode":1,"shiftEnterMode":2,"toolbarStartupExpanded":true,"width":"100%","skin":"moono-lisa","format_tags":"p;div;pre;address;h1;h2;h3;h4;h5;h6","show_toggle":"f","default":"t","ss":"2","loadPlugins":{"drupalbreaks":{"name":"drupalbreaks","desc":"Plugin for inserting Drupal teaser and page breaks.","path":"\/sites\/all\/modules\/contrib\/ckeditor\/plugins\/drupalbreaks\/","buttons":{"DrupalBreak":{"label":"DrupalBreak","icon":"images\/drupalbreak.png"}},"default":"t"},"image2":{"name":"image2","desc":"Enhanced Image plugin. See \u003Ca href=\u0022http:\/\/ckeditor.com\/addon\/image2\u0022\u003Eaddon page\u003C\/a\u003E for more details.","path":"\/\/cdn.ckeditor.com\/4.9.1\/full-all\/plugins\/image2\/","buttons":{"Enhanced Image":{"icon":"icons\/image.png","label":"Insert Enhanced Image"}},"default":"t"},"linkit":{"name":"linkit","desc":"Support for Linkit module","path":"\/sites\/all\/modules\/contrib\/linkit\/editors\/ckeditor\/","buttons":{"linkit":{"label":"Linkit","icon":"icons\/linkit.png"}}},"tableresize":{"name":"tableresize","desc":"Table Resize plugin. See \u003Ca href=\u0022http:\/\/ckeditor.com\/addon\/tableresize\u0022\u003Eaddon page\u003C\/a\u003E for more details.","path":"\/\/cdn.ckeditor.com\/4.9.1\/full-all\/plugins\/tableresize\/","buttons":false,"default":"t"}},"entities":false,"entities_greek":false,"entities_latin":false,"scayt_autoStartup":false,"stylesCombo_stylesSet":"drupal:\/sites\/all\/modules\/contrib\/ckeditor\/ckeditor.styles.js","contentsCss":["\/sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css?pmg981","\/\/cdn.ckeditor.com\/4.9.1\/full-all\/contents.css?pmg981"]},"comment_text":{"customConfig":"\/sites\/all\/modules\/contrib\/ckeditor\/ckeditor.config.js?","defaultLanguage":"en","toolbar":"[\n    [\u0027Bold\u0027,\u0027Italic\u0027,\u0027Underline\u0027],\n    [\u0027NumberedList\u0027,\u0027BulletedList\u0027],\n    [\u0027Link\u0027],\n    [\u0027RemoveFormat\u0027]\n]","enterMode":1,"shiftEnterMode":2,"toolbarStartupExpanded":true,"width":"100%","skin":"moono-lisa","format_tags":"p;div;pre;address;h1;h2;h3;h4;h5;h6","show_toggle":"f","default":"t","ss":"2","loadPlugins":{"drupalbreaks":{"name":"drupalbreaks","desc":"Plugin for inserting Drupal teaser and page breaks.","path":"\/sites\/all\/modules\/contrib\/ckeditor\/plugins\/drupalbreaks\/","buttons":{"DrupalBreak":{"label":"DrupalBreak","icon":"images\/drupalbreak.png"}},"default":"t"},"image2":{"name":"image2","desc":"Enhanced Image plugin. See \u003Ca href=\u0022http:\/\/ckeditor.com\/addon\/image2\u0022\u003Eaddon page\u003C\/a\u003E for more details.","path":"\/\/cdn.ckeditor.com\/4.5.4\/full-all\/plugins\/image2\/","buttons":{"Enhanced Image":{"icon":"icons\/image.png","label":"Insert Enhanced Image"}},"default":"t"},"tableresize":{"name":"tableresize","desc":"Table Resize plugin. See \u003Ca href=\u0022http:\/\/ckeditor.com\/addon\/tableresize\u0022\u003Eaddon page\u003C\/a\u003E for more details.","path":"\/\/cdn.ckeditor.com\/4.5.4\/full-all\/plugins\/tableresize\/","buttons":false,"default":"t"}},"entities":false,"entities_greek":false,"entities_latin":false,"scayt_autoStartup":false,"stylesCombo_stylesSet":"drupal:\/sites\/all\/modules\/contrib\/ckeditor\/ckeditor.styles.js","contentsCss":["\/sites\/all\/themes\/sloth\/css\/sloth.css?pmg981","\/sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css?pmg981"]},"full_html":{"customConfig":"\/sites\/all\/modules\/contrib\/ckeditor\/ckeditor.config.js?","defaultLanguage":"en","toolbar":"[\n    [\u0027Source\u0027],\n    [\u0027Cut\u0027,\u0027Copy\u0027,\u0027Paste\u0027,\u0027PasteText\u0027,\u0027PasteFromWord\u0027,\u0027-\u0027,\u0027SpellChecker\u0027,\u0027Scayt\u0027],\n    [\u0027Undo\u0027,\u0027Redo\u0027,\u0027Find\u0027,\u0027Replace\u0027,\u0027-\u0027,\u0027SelectAll\u0027],\n    [\u0027Media\u0027,\u0027Flash\u0027,\u0027Table\u0027,\u0027HorizontalRule\u0027,\u0027Smiley\u0027,\u0027SpecialChar\u0027,\u0027Iframe\u0027],\n    \u0027\/\u0027,\n    [\u0027Bold\u0027,\u0027Italic\u0027,\u0027Underline\u0027,\u0027Strike\u0027,\u0027-\u0027,\u0027Subscript\u0027,\u0027Superscript\u0027,\u0027-\u0027,\u0027RemoveFormat\u0027],\n    [\u0027NumberedList\u0027,\u0027BulletedList\u0027,\u0027-\u0027,\u0027Outdent\u0027,\u0027Indent\u0027,\u0027Blockquote\u0027,\u0027CreateDiv\u0027],\n    [\u0027JustifyLeft\u0027,\u0027JustifyCenter\u0027,\u0027JustifyRight\u0027,\u0027JustifyBlock\u0027,\u0027-\u0027,\u0027BidiLtr\u0027,\u0027BidiRtl\u0027,\u0027-\u0027,\u0027Language\u0027],\n    [\u0027Link\u0027,\u0027linkit\u0027,\u0027Unlink\u0027,\u0027Anchor\u0027],\n    \u0027\/\u0027,\n    [\u0027Format\u0027,\u0027Font\u0027,\u0027FontSize\u0027],\n    [\u0027TextColor\u0027,\u0027BGColor\u0027],\n    [\u0027Maximize\u0027,\u0027ShowBlocks\u0027],\n    []\n]","enterMode":1,"shiftEnterMode":2,"toolbarStartupExpanded":true,"width":"100%","skin":"moono-lisa","format_tags":"p;div;pre;address;h1;h2;h3;h4;h5;h6","show_toggle":"f","default":"t","ss":"2","loadPlugins":{"drupalbreaks":{"name":"drupalbreaks","desc":"Plugin for inserting Drupal teaser and page breaks.","path":"\/sites\/all\/modules\/contrib\/ckeditor\/plugins\/drupalbreaks\/","buttons":{"DrupalBreak":{"label":"DrupalBreak","icon":"images\/drupalbreak.png"}},"default":"t"},"image2":{"name":"image2","desc":"Enhanced Image plugin. See \u003Ca href=\u0022http:\/\/ckeditor.com\/addon\/image2\u0022\u003Eaddon page\u003C\/a\u003E for more details.","path":"\/\/cdn.ckeditor.com\/4.9.1\/full-all\/plugins\/image2\/","buttons":{"Enhanced Image":{"icon":"icons\/image.png","label":"Insert Enhanced Image"}},"default":"t"},"media":{"name":"media","desc":"Plugin for embedding files using Media CKEditor","path":"\/sites\/all\/modules\/contrib\/media_ckeditor\/js\/plugins\/media\/","buttons":{"Media":{"icon":"icons\/media.png","label":"Add media"}},"default":"f"},"tableresize":{"name":"tableresize","desc":"Table Resize plugin. See \u003Ca href=\u0022http:\/\/ckeditor.com\/addon\/tableresize\u0022\u003Eaddon page\u003C\/a\u003E for more details.","path":"\/\/cdn.ckeditor.com\/4.9.1\/full-all\/plugins\/tableresize\/","buttons":false,"default":"t"}},"entities":false,"entities_greek":false,"entities_latin":false,"scayt_autoStartup":false,"stylesCombo_stylesSet":"drupal:\/sites\/all\/modules\/contrib\/ckeditor\/ckeditor.styles.js","contentsCss":["\/sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css?pmg981","\/\/cdn.ckeditor.com\/4.9.1\/full-all\/contents.css?pmg981"]}},"plugins":[],"textarea_default_format":{"edit-comment-body-value":"comment_text"},"module_path":"\/sites\/all\/modules\/contrib\/ckeditor","editor_path":"\/\/cdn.ckeditor.com\/4.9.1\/full-all\/","ajaxToken":"WxYlUkHHiHinmgiv8zvnrdJpBpEYzi12HwB0Q9JQyFE","xss_url":"\/ckeditor\/xss","theme":"sloth","elements":{"edit-comment-body-value":"comment_text"},"autostart":{"edit-comment-body-value":true}},"linkit":{"autocompletePath":"https:\/\/www.teachingchannel.org\/linkit\/autocomplete\/___profile___?s=","dashboardPath":"\/linkit\/dashboard\/","currentInstance":{},"formats":{"filtered_html":{"profile":"clone_of_linkit_field"}}},"media":{"browserUrl":"\/media\/browser?render=media-popup","styleSelectorUrl":"\/media\/-media_id-\/format-form?render=media-popup","dialogOptions":{"dialogclass":"media-wrapper","modal":true,"draggable":false,"resizable":false,"minwidth":500,"width":670,"height":280,"position":"center","overlay":{"backgroundcolor":"#000000","opacity":0.40000000000000002},"zindex":10000},"wysiwyg_allowed_attributes":["alt","title","height","width","hspace","vspace","border","align","style","class","id","usemap","data-picture-group","data-picture-align","data-picture-mapping","data-delta"],"img_alt_field":"field_file_image_alt_text","img_title_field":"field_file_image_title_text"},"media_ckeditor":{"fully_rendered_files":false},"mediaDoLinkText":true,"ajax":{"edit-ajax-comments-reply-form-272606-0-0":{"callback":"st_comment_submit_js","wrapper":"ajax-comments-reply-form-272606-0-0","method":"replaceWith","effect":"fade","event":"mousedown","keypress":true,"prevent":"click","url":"\/system\/ajax","submit":{"_triggering_element_name":"op","_triggering_element_value":"Submit"}}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"resource_popup":0,"dfpGoogleTagCmd":{"asyncRendering":0,"singleRequest":0,"collapseEmptyDivs":1,"disableInitialLoad":0,"setCentering":0,"globalTargets":[],"viewportBreakpoints":[]},"ogContext":{"groupType":"node","gid":"1646"}});</script>
+  </head>
+<body class="html not-front logged-in no-sidebars page-teams page-teams- page-teams-149481 page-teams-discussions page-teams-discussions- page-teams-discussions-272606 og-context og-context-node og-context-node-1646 site-name-teaching-channel- section-teams panels-page theme-sloth"  ng-app="tchApp">
+  <div class="skip-link" class="nocontent">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9FXR4"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->  <!--.page -->
+<!-- mobile main menu -->
+<div class="position-fixed bg-white hide-for-large overflow-y-scroll" id="mobile-menu" data-toggler=".expanded" data-hide-for="large">
+  <a class="position-absolute mobile-menu-close" data-toggle="mobile-menu">
+    <i class="icon-close" aria-hidden="true"></i>
+  </a>
+  <div class="h-search-box position-relative hide-for-medium-only">
+    <form action="/site-search" method="GET">
+      <input type="text" name="keyword" class="margin-bottom-0" placeholder="Explore Teaching Channel"/>
+    </form>
+    <i class="icon-search vertical-align no-pointer"></i>
+  </div>
+  <div class="mobile-main-menu">
+          <ul id="main-menu" class="menu vertical medium-horizontal" data-responsive-menu="drilldown medium-dropdown"><li class="first leaf"><a href="/videos">Videos</a></li><li class="leaf"><a href="/topics">Topics</a></li><li class="expanded has-submenu " id="" style=""><a class="no-link">Community</a><ul class="submenu menu vertical" data-submenu><li class="first leaf"><a href="/community">Teachers</a></li><li class="last leaf"><a href="/question">Ask Anything</a></li></ul></li><li class="last collapsed"><a href="/teams">Teams</a></li></ul>      </div>
+</div>
+<!-- mobile main menu end -->
+<!-- workspace mobile menu -->
+  <div class="position-fixed bg-gray hide-for-large overflow-y-scroll" id="mobile-workspace-menu" data-toggler=".expanded" data-hide-for="large">
+    <a class="position-absolute mobile-menu-close" data-toggle="mobile-workspace-menu">
+      <i class="icon-close color-white" aria-hidden="true"></i>
+    </a>
+    <div class="row user-profile-items">
+      <div class="columns shrink padding-right-0 text-center">
+        <div class="image-wrapper">
+          <img class="round-full image-style-medium" width="220" src="https://www.teachingchannel.org/s3lp/files/styles/medium/s3lp/teacher_photos/9174/221/1523992364.jpg?itok=WTdMua63" alt="" />        </div>
+        <div class="profile-edit-section clearfix text-center display-inline-block">
+            <a href="/workspace/settings" class="bg-gray-f4 float-left round-full settings-icon flex-container align-center-middle" title="Edit your settings"><i class="icon-setting" aria-hidden="true"></i></a><a href="/workspace/profile" class="bg-gray-f4 float-left round-full edit-icon flex-container align-center-middle" title="Edit your Profile"><i class="icon-edit" aria-hidden="true"></i></a>        </div>
+      </div>
+      <div class="columns">
+        <div class="profile-text-section">
+          <div class="profile-name stat color-white proxima-light">
+            Mari Altshuler          </div>
+          <div class="profile-link hide-for-large">
+            <a href="/workspace/about-me"><span class="color-white">Profile</span></a><br><a href="/user/logout"><span class="color-white underline">Logout</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-main-menu">
+      <ul class="menu vertical clearfix"><li class="first leaf menu-depth-1 menu-item-1452"><a href="/workspace">MY HOMEPAGE</a></li><li class="leaf menu-depth-1 menu-item-23436"><a href="/org-admin">District Admin</a></li><li class="leaf menu-depth-1 menu-item-14601"><a href="/workspace/dashboard">Facilitator Dashboard</a></li><li class="leaf menu-depth-1 menu-item-14611"><a href="/workspace/my-teams">My Teams</a></li><li class="leaf menu-depth-1 menu-item-14606"><a href="/workspace/resources">My Resources</a></li><li class="leaf menu-depth-1 menu-item-1457"><a href="/workspace/notebooks">My Notes</a></li><li class="expanded menu-depth-1 menu-item-2022"><a href="/workspace/messages">My Messages</a></li><li class="leaf menu-depth-1 menu-item-1455"><a href="/workspace/connections">My Connections</a></li><li class="last leaf menu-depth-1 menu-item-11596"><a href="/workspace/about-me">About Me</a></li></ul>    </div>
+
+    <div class="sidebar-links quick-link collapse-hide">
+  <h6 class="text-uppercase color-white title columns">Quick Links</h6>
+  <div class="clearfix columns">
+    <p><a href="https://www.teachingchannel.org/teams-product-updates">Tch Product Updates Page</a><br/>
+<a href="http://www.sesp.northwestern.edu/">NU SESP Homepage</a><br/>
+<a href="/?national=1">Tch National Homepage</a><br/></p>  </div>
+</div>
+    </div>
+
+  </div>
+<!-- workspace mobile menu end -->
+<div role="document" class="page off-canvas-wrapper">
+  <div class="inner-wrap off-canvas-wrapper-inner" id="inner-wrap" data-off-canvas-wrapper>
+
+    <aside id="off-canvas-menu" class="off-canvas position-left" data-off-canvas>
+      <button class="close-button" aria-label="Close menu" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+      </button>
+
+              <ul id="main-menu" class="menu vertical medium-horizontal" data-responsive-menu="drilldown medium-dropdown"><li class="first leaf"><a href="/videos">Videos</a></li><li class="leaf"><a href="/topics">Topics</a></li><li class="expanded has-submenu " id="" style=""><a class="no-link">Community</a><ul class="submenu menu vertical" data-submenu><li class="first leaf"><a href="/community">Teachers</a></li><li class="last leaf"><a href="/question">Ask Anything</a></li></ul></li><li class="last collapsed"><a href="/teams">Teams</a></li></ul>          </aside>
+
+
+
+    <div class="off-canvas-content" data-off-canvas-content>
+
+      <!--.l-header -->
+      <header role="banner" class="l-header">
+                                                            
+                  <!--.top-bar -->
+                      <div id="top-bar-sticky-container" data-sticky-container>
+          
+          <div class="top-bar-sticky-wrapper" data-sticky data-margin-top="0" data-top-anchor="top-bar-sticky-container">
+            <div class="border-bottom-gray" >
+              <nav class="header-section align-middle row">
+                <span class="hide-for-large" data-responsive-toggle="topbar-responsive" data-hide-for="large">
+                  <a class="no-link small-menu-opener" data-toggle="mobile-menu" ></a>
+                </span>
+                <div class="top-bar-title">
+                  <div class="logo-wrapper overflow-hidden">
+                    <a href="/workspace"><img class="site-logo" src="https://dqam6mam97sh3.cloudfront.net/images/NU Education long.png" alt="Northwestern University School of Education &amp; Social Policy" /></a>                  </div>
+                </div>
+
+                <div class="top-bar columns position-relative">
+                  <div class="h-search-box position-absolute" id="header-search" data-toggler=".expanded">
+                    <form action="/site-search" method="GET">
+                      <input type="text" name="keyword" class="margin-bottom-0" placeholder="Explore Teaching Channel"/>
+                      <a class="close-button search-close vertical-align" data-toggle="header-search">
+                        <i class="icon-close" aria-hidden="true"></i>
+                      </a>
+                    </form>
+                    <i class="icon-search vertical-align no-pointer"></i>
+                  </div>
+
+                                      <div class="top-bar-left main-nav-wrapper show-for-large">
+                      <ul id="main-menu" class="menu vertical medium-horizontal" data-responsive-menu="drilldown medium-dropdown"><li class="first leaf"><a href="/videos">Videos</a></li><li class="leaf"><a href="/topics">Topics</a></li><li class="expanded has-submenu " id="" style=""><a class="no-link">Community</a><ul class="submenu menu vertical" data-submenu><li class="first leaf"><a href="/community">Teachers</a></li><li class="last leaf"><a href="/question">Ask Anything</a></li></ul></li><li class="last collapsed"><a href="/teams">Teams</a></li></ul>                    </div>
+                  
+                                      <div class="top-bar-right position-relative">
+                      <a class="side-menu-on hide-for-large position-absolute" data-toggle="mobile-workspace-menu"></a>
+                      <ul id="secondary-menu" class="menu vertical medium-horizontal right" data-responsive-menu="drilldown medium-dropdown"><li class="first expanded has-submenu"><a class="no-link"><img src="https://www.teachingchannel.org/s3lp/files/styles/profile_small/s3lp/teacher_photos/9174/221/1523992364.jpg?itok=it3F65fd" alt="Profile" class="rounded menu-profile-image"></a><ul class="submenu menu vertical" data-submenu><li class="first leaf " id="" style=""><a href="/workspace">My Homepage</a></li><li class="leaf " id="" style=""><a href="/org-admin">District Admin</a></li><li class="leaf hide-plus" id="" style=""><a href="/workspace/my-teams">My Teams</a></li><li class="leaf " id="" style=""><a href="/workspace/resources">My Resources</a></li><li class="leaf " id="" style=""><a href="/workspace/notebooks">My Notes</a></li><li class="leaf " id="" style=""><a href="/workspace/messages">My Messages</a></li><li class="leaf " id="" style=""><a href="/workspace/connections">My Connections</a></li><li class="leaf " id="" style=""><a href="/workspace/about-me">About Me</a></li><li class="last leaf " id="" style=""><a href="/user/logout">Log Out</a></li></ul></li><li class="last leaf search" id="" style=""><a class="no-link search-opener" data-toggle="header-search"><i class="icon-search"></i></a></li></ul>                    </div>
+                                  </div>
+              </nav>
+            </div>
+          </div>
+
+                      </div>
+                    <!--/.top-bar -->
+        
+        <!-- Title, slogan and menu -->
+                <!-- End title, slogan and menu -->
+
+              </header>
+      <!--/.l-header -->
+
+      
+      
+      
+      <!--.l-main -->
+      <main role="main" class="row l-main">
+        <!-- .l-main region -->
+        <div class=" main columns">
+          
+          <a id="main-content"></a>
+
+          
+          
+                      <div class="local-tasks">
+                                        </div>
+          
+          
+            
+      
+  <div  class="block-content content">    
+  <div class="row small-collapse main-section">
+    <div class="shrink columns medium-full-width l-sidebar-wrapper" id="lp-behaviour" data-toggler=".expanded">
+      <a class="lp-opener hide" data-toggle="lp-behaviour"><span></span><span></span></a>
+      <div class="l-sidebar bg-gray full-height" id="dark-sidebar" data-toggler=".collapse">
+        <div class="columns text-right p-tb-10 hide side-menu-close-wrapper"><a href="javascript:void(0);" class="color-white side-menu-off"><i class="icon-close color-white"></i></a></div>
+        <div class="panel-pane pane-team-logo-details no-title block"   class="panel-pane pane-team-logo-details no-title block">
+  
+      
+  
+  <div class="pane-content">
+    <div class="profile-sidebar sidebar-top">
+    <div class="sidebar-image-wrapper text-center show-for-large">
+      <div class="position-relative display-inline-block">
+        <img class="round-full image-style-profile" width="220" src="https://duuciyt57l69v.cloudfront.net/styles/profile/s3/default_images/team_avatar_1.png?itok=cuZdKkhf" alt="Chicago Area Argumentation in Mathematics Course" />      </div>
+    </div>
+    <a class="sidebar-collapse rounded align-center-middle flex-container show-for-large" data-toggle="dark-sidebar"><i class="icon-left-arrow collapse-hide"></i><i class="icon-right-arrow collapse-show"></i></a>
+    <div class="rotated-text overflow-hidden proxima-semibold collapse-show show-for-large"><span class="display-inline-block rotated-text-inner text-nowrap text-uppercase color-white"> Chicago Area Argumentation in Mathematics Course</span></div>
+    <div class="profile-text-section show-for-large">
+      <div class="profile-name stat color-white column text-center collapse-hide proxima-light">
+        Chicago Area Argumentation in Mathematics Course      </div>
+    </div>
+    <div class="hide-for-large color-white">
+      <div class="eyebrow">Team</div>
+      <div class="profile-name stat color-white proxima-semibold">Chicago Area Argumentation in Mathematics Course</div>
+    </div>
+  <div class="columns show-for-large">
+    <div class="card-section color-white collapse-hide">
+    <span class="">
+        <i class="comments">327</i>
+       Comments
+    </span>
+      <span class="members float-right">
+        <i class="fa fa-user-circle-o  fa-lg"></i>
+        24 Members
+    </span>
+    </div>
+  </div>
+</div>
+  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-lp-menu no-title block"   class="panel-pane pane-lp-menu no-title block">
+  
+      
+  
+  <div class="pane-content">
+    <div data-teamid="149481">
+  <div class="color-white">
+    <ul class="no-bullet menu vertical accordion-menu" data-accordion-menu >
+                    <li>
+              <a  href="/teams/149481/learning-plan">Learning Plan</a>
+        
+
+                <ul class="no-bullet menu vertical   ">
+                                                                            <li>
+                      <a  href="/teams/149481/learning-plan/607236">Week 0: Getting Started</a>
+                    </li>
+                                                          <li>
+                      <a  href="/teams/149481/learning-plan/607256">Week 1: Introduction to Argumentation</a>
+                    </li>
+                                                          <li>
+                      <a  href="/teams/149481/learning-plan/607301">Week 2: Which One Doesn't Belong?</a>
+                    </li>
+                                                          <li>
+                      <a  href="/teams/149481/learning-plan/607351">Week 3: Equality</a>
+                    </li>
+                                                          <li>
+                      <a  href="/teams/149481/learning-plan/607386">Week 4: True/False Equations</a>
+                    </li>
+                                                          <li>
+                      <a  href="/teams/149481/learning-plan/607431">Week 5: Reflecting on Our Learning about Argumentation in Mathematics</a>
+                    </li>
+                                  </ul>
+            
+          
+
+
+        </li>
+                      <li>
+          <a class="active"href="/teams/149481/discussions">Discussion</a>
+        </li>
+      
+      <li>
+        <a  href="/teams/149481/members">Members</a>
+      </li>
+
+      <li>
+        <a  href="/teams/149481/resources">Resources</a>
+      </li>
+      <li>
+                <a href="#">Options</a>
+        <ul class="menu vertical nested">
+          <li>
+            <a href="/edit-team/nojs/149481" class=" ctools-use-modal">Edit Team</a>          </li>
+          
+          <li>
+            <a href="/clone-team/nojs/149481" class=" ctools-use-modal">Clone Team</a>          </li>
+          
+                    
+          <li>
+                          <a href="/team/149481/archive?destination=teams/149481/discussions/272606">Archive Team</a>                      </li>
+          
+                    
+                         <li><a href="/leave/team/149481">Leave Team</a></li>
+                     <li>
+                          <a class="delete_team_from" data-del_team_id="149481">Delete Team</a>
+                        </li>
+          <li>
+            <a href="/reports/149481/team_participant/team">Participation Report</a>          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-team-sideber-details no-title block"   class="panel-pane pane-team-sideber-details no-title block">
+  
+      
+  
+  <div class="pane-content">
+    
+<div class="sidebar-links  collapse-hide">
+    <h6 class="text-uppercase color-white columns title">Details:</h6>
+    <div class="small columns">
+    STARTED: 02/28/2018</br>
+    LAST ACTIVITY: 06/28/2018</br>
+    </div>
+</div>
+<div class="sidebar-links  collapse-hide">
+    <h6 class="text-uppercase  columns color-white title">Facilitators:</h6>
+            <div class="name columns">
+            Tracy Dobie        </div>
+            <div class="name columns">
+            Mari Altshuler        </div>
+            <div class="name columns">
+            Miriam Sherin        </div>
+    </div>
+
+
+  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-team-tags no-title block"   class="panel-pane pane-team-tags no-title block">
+  
+      
+  
+  <div class="pane-content">
+    <div class="columns collapse-hide p-top-30 show-for-large">
+  <div class="tag-items">
+              <a class="tag-item" href="/topics?im_st_field_subjects[]=187831">Math</a>
+                    <a class="tag-item" href="/topics?im_st_field_grades[]=187531">Kindergarten</a>
+                    <a class="tag-item" href="/topics?im_st_field_grades[]=183956">1</a>
+                    <a class="tag-item" href="/topics?im_st_field_grades[]=184346">2</a>
+            </div>
+</div>
+  </div>
+
+  
+  </div>
+      </div>
+    </div>
+    <div class="columns p-bottom-30 r-content medium-full-width">
+      <div class="panel-pane pane-page-title no-title block"   class="panel-pane pane-page-title no-title block">
+  
+      
+  
+  <div class="pane-content">
+    <h1 class="h2 page-title">Chicago Area Argumentation in Mathematics Course Discussion</h1>
+  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-discussion-details no-title block"   class="panel-pane pane-discussion-details no-title block">
+  
+      
+  
+  <div class="pane-content">
+    <div class="flex-container align-right p-bottom-15 small-p-bottom-0">
+        
+      <a href="/teams/149481/discussion/272606/edit?destination=teams/149481/discussions/272606" class="create-discussion button medium">Edit</a>      <a href="/teams/149481/discussion/272606/delete" class="create-discussion button medium">Delete</a>    </div>
+<div class="team-list m-team st-shadow-small">
+
+  <div class="team-body columns bg-white border-medium-gray">
+    <div class="row ">
+      <div class="columns small-12 medium-9">
+        <div class="team-left full-height">
+          <div class="row">
+            <div class="columns small-12 medium-3">
+              <div class="img-section">
+                <img class="thumb round-full" width="220" src="https://www.teachingchannel.org/sites/default/files/styles/profile/public/default_images/teamplaceholder_0.png?itok=W1-ZARnH" alt="" />              </div>
+              <div class="activity p-top-10 small-bottom-margin-9">
+                <div class="">STARTED: <span class="proxima-bold">04/11/2018</span></div>
+                <div><span class="proxima-bold">LAST ACTIVITY: 04/17/2018</span></div>
+              </div>
+            </div>
+            <div class="columns small-12 medium-9">
+              <p><strong>Kickoff Meeting</strong></p>
+<p>Share a reflection on your students’ thinking, as well as what you learned about argumentation. Consider the following:</p>
+<ul><li>What did you notice about your students' thinking?</li>
+<li>What types of evidence did they use to support their ideas?</li>
+<li>Did anything surprise you? Do you have any questions/wonderings?</li>
+</ul><div class="p-top-15"></div>            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns small-12 medium-3">
+        <div class="facilator team-sidebar-item">
+          <img class="thumb round-full" width="55" height="55" src="https://www.teachingchannel.org/s3lp/files/styles/small_thumbnail/s3lp/teacher_photos/9173/198/1523985634.jpg?itok=Eb-pbUiR" alt="" /><span class="lowbrow proxima-bold letter-spacing-half">Tracy Dobie</span>        </div>
+        <div class="comments-members team-sidebar-item">
+          <span class="comments">
+           12          </span>
+          <span class="lowbrow proxima-bold letter-spacing-half">Comments</span>
+        </div>
+
+                  <div class="comments-members team-sidebar-item">
+          <span class="comments">
+           0          </span>
+            <span class="lowbrow proxima-bold letter-spacing-half">Resources</span>
+
+          </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="p-bottom-30"></div>
+<div class="row align-center">
+  <div class="columns small-12 medium-10">
+    <div id="comments" class="comment-wrapper comment-wrapper-nid-272606">
+      <!--    <h4 class="comment-title text-uppercase   section-title title-with-bg  proxima-bold p-lr-30 ">--><!--</h4>-->
+
+      
+  <div class=" align-center ajax-comments-wrapper-parent">
+    <div class="section-title">12 Comments</div>
+    <a id="comment-1289346"></a>
+
+<div class="media-object comment-box comment ajax-comment-wrapper comment-wrapper-1289346" >
+    <div class=" media-object-section  clearfix">
+      <a href="/workspace/messages/nojs/profile/5619291?team=149481" class=" ctools-use-modal "><img class="round-full small-image-round" style="width: 50px;" src="https://duuciyt57l69v.cloudfront.net/styles/small_thumbnail/s3/default_images/user_avatar_2.png?itok=QA3c5Fci" width="55" height="55" alt="" /></a>    </div>
+    <div class=" media-object-section main-section attribution">
+        <div class="submitted">
+            <p class="commenter-name margin-bottom-0">
+                <span class="proxima-semibold name"><a href="/teacher/angela-johnson-28186" title="View user profile." class="username">Angela Johnson</a></span>
+                <span class="comment-time"> Apr 17, 2018 3:12pm </span>
+            </p>
+        </div>
+
+        <div class="comment-text ">
+
+            
+
+            <div class="m-bottom-20 content">
+                <p>It was really fun to try out true/false with my students and get to see their thinking - they had so many different ideas! But it was definitely challenging to know how to respond at times and I worry that maybe I didn't involve enough of my students. I'm looking forward to continuing with tasks like these so I can hear more students' ideas and keep working on my own facilitation of their conversations.</p>
+<p>In terms of what students noticed and how they supported their claims, I saw a few things happening. Several of the boys who responded latched on to&nbsp;the idea that&nbsp;you can add up the twos (the divisors) to get four, so the statements are equal. I expected some students might say something like that since we&rsquo;ve talked about the distributive property with multiplication. One thing that surprised me a bit was when the second student who&nbsp;responded said that "If you switch it around..." then it would be 80/2 + 80/2 = 80/4. It seems like he is thinking the same thing as the other boys, except I now have some questions about his understanding of equality that I'd like to explore. I wonder why he thought switching the two sides of the equation was necessary to justify his thinking that the statement is true. Any thoughts on that?</p>
+<p>V&nbsp;was the first to respond for the students who thought the equation was false, and her idea was that you can't change the divisor; you can only change the dividend. She also said that if you did 80/2 you already split all the Skittles, so you can't do it again. It seems like she understands that the distributive property doesn't work in this situation, and she manages to convince J, though after watching the clip again, I'm not sure whether some of the other students understood her claim. I'm also wondering whether students might actually be more confused by her comment that you can't split it again. Technically we could split it again; we would just divide the result by 2 again, rather than adding 80/2. So in other words it would be (80/2)/2. I'm thinking now that it would have been good to unpack some of her language a bit more and hear from different students to see what they thought about V's&nbsp;idea.&nbsp;</p>
+<p>Overall, one of my goals is to figure out how to get a better handle on what some of the quieter students in&nbsp;my class are thinking.&nbsp;When I watched the video again, I could see a number of students who seemed disengaged, and I want to bring them in a bit more. I'm thinking that maybe I could ask students more often if they have any clarifying questions they want to ask the student who shared, or I could ask more students to repeat each other's thinking. Any other ideas for how I can bring in more voices?</p>
+<p>Looking forward to doing this again, and&nbsp;can't wait to see some of your videos and hear about your experiences!&nbsp;</p>                            </div> <!-- /.content -->
+            <div class="comment-bottom eyebrow">
+            <ul class="links inline"><li class="comment-reply first last"><a href="/comment/reply/272606/1289346/discussion/149481" class="use-ajax-comments ajax-comments-reply ajax-comments-reply-272606-1289346">reply</a></li></ul><span class="flag-wrapper flag-helpful flag-helpful-1289346">
+      <a href="/flag/flag/helpful/1289346?destination=teams/149481/discussions/272606&amp;token=PPWCTs9P_7lS9-nXnZXt42yQXS73FABSNXZob8vIHDE" title="Click the heart to recommend this answer" class="flag flag-action flag-link-toggle button" rel="nofollow"><i class="fa fa-heart-o" aria-hidden="true"></i></a><span class="flag-throbber">&nbsp;</span>
+    </span>
+<span class="no-transform proxima-semibold st-comment st-comment-recommended-1289346">Recommended (<span class="recommended-count-1289346">0</span>)</span>
+
+            </div>
+        </div> <!-- /.comment-text -->
+    </div>
+</div>
+
+<div class="indented"><a id="comment-1289401"></a>
+
+<div class="media-object comment-box comment ajax-comment-wrapper comment-wrapper-1289401" >
+    <div class=" media-object-section  clearfix">
+      <a href="/workspace/messages/nojs/profile/5619151?team=149481" class=" ctools-use-modal "><img class="round-full small-image-round" style="width: 50px;" src="https://duuciyt57l69v.cloudfront.net/styles/small_thumbnail/s3/default_images/user_avatar_2.png?itok=QA3c5Fci" width="55" height="55" alt="" /></a>    </div>
+    <div class=" media-object-section main-section attribution">
+        <div class="submitted">
+            <p class="commenter-name margin-bottom-0">
+                <span class="proxima-semibold name"><a href="/teacher/katerina-rallis" title="View user profile." class="username">Katerina Rallis</a></span>
+                <span class="comment-time"> Apr 17, 2018 5:31pm </span>
+            </p>
+        </div>
+
+        <div class="comment-text ">
+
+            
+
+            <div class="m-bottom-20 content">
+                Hi Angela, 
+
+I really enjoyed watching your students as all students are pretty similar across grade level! Just the way a handful of students responded with reasoning and others turned around and screamed "TRUE" made me reflect on my own primary students. It is vital to teach our students exactly how to discuss. I have often used "Talk Moves" to prompt my students - What do you think? I agree... I disagree... That might help engage your quieter students. They may not know exactly how to get involved in the conversation. 
+
+It was very interesting to follow your students line of thinking - V clearly has a strong grasp on division in relation to multiplication. I think that having students discuss their understanding helps us as teachers see into their brain and grasp their conceptual understanding. 
+
+Thanks for sharing!                            </div> <!-- /.content -->
+            <div class="comment-bottom eyebrow">
+            <ul class="links inline"><li class="comment-reply first last"><a href="/comment/reply/272606/1289401/discussion/149481" class="use-ajax-comments ajax-comments-reply ajax-comments-reply-272606-1289401">reply</a></li></ul><span class="flag-wrapper flag-helpful flag-helpful-1289401">
+      <a href="/flag/flag/helpful/1289401?destination=teams/149481/discussions/272606&amp;token=946aG5-6wsb4PifRzN2jH3A9NlEexLbzvxdLbN_udcA" title="Click the heart to recommend this answer" class="flag flag-action flag-link-toggle button" rel="nofollow"><i class="fa fa-heart-o" aria-hidden="true"></i></a><span class="flag-throbber">&nbsp;</span>
+    </span>
+<span class="no-transform proxima-semibold st-comment st-comment-recommended-1289401">Recommended (<span class="recommended-count-1289401">0</span>)</span>
+
+            </div>
+        </div> <!-- /.comment-text -->
+    </div>
+</div>
+<a id="comment-1289396"></a>
+
+<div class="media-object comment-box comment ajax-comment-wrapper comment-wrapper-1289396" >
+    <div class=" media-object-section  clearfix">
+      <a href="/workspace/messages/nojs/profile/3820891?team=149481" class=" ctools-use-modal "><img class="round-full small-image-round" style="width: 50px;" src="https://www.teachingchannel.org/s3lp/files/styles/small_thumbnail/s3lp/teacher_photos/7548/194/1524187942.jpg?itok=V6Gk0cSk" width="55" height="55" alt="" /></a>    </div>
+    <div class=" media-object-section main-section attribution">
+        <div class="submitted">
+            <p class="commenter-name margin-bottom-0">
+                <span class="proxima-semibold name"><a href="/teacher/michelle-comitor" title="View user profile." class="username">Michelle Comitor</a></span>
+                <span class="comment-time"> Apr 17, 2018 5:29pm </span>
+            </p>
+        </div>
+
+        <div class="comment-text ">
+
+            
+
+            <div class="m-bottom-20 content">
+                Hi Angela,
+
+This was great! sitting watching I was really able to tell which students have an understanding of division and which kids need more direct instruction by their thinking as they tried to explain their the reason for their position. I think it was evident that the friends that thought the answer was true do not have a clear understanding of order of operations.
+
+You mentioned maybe you could have included more students or engage the quieter ones. One suggestion might be to just randomly pick names.                            </div> <!-- /.content -->
+            <div class="comment-bottom eyebrow">
+            <ul class="links inline"><li class="comment-reply first last"><a href="/comment/reply/272606/1289396/discussion/149481" class="use-ajax-comments ajax-comments-reply ajax-comments-reply-272606-1289396">reply</a></li></ul><span class="flag-wrapper flag-helpful flag-helpful-1289396">
+      <a href="/flag/flag/helpful/1289396?destination=teams/149481/discussions/272606&amp;token=P-kkCKI_2NA7gvQS3vRLBCwJ2pSpKFY7T7tGUuKHSQA" title="Click the heart to recommend this answer" class="flag flag-action flag-link-toggle button" rel="nofollow"><i class="fa fa-heart-o" aria-hidden="true"></i></a><span class="flag-throbber">&nbsp;</span>
+    </span>
+<span class="no-transform proxima-semibold st-comment st-comment-recommended-1289396">Recommended (<span class="recommended-count-1289396">0</span>)</span>
+
+            </div>
+        </div> <!-- /.comment-text -->
+    </div>
+</div>
+<a id="comment-1289391"></a>
+
+<div class="media-object comment-box comment ajax-comment-wrapper comment-wrapper-1289391" >
+    <div class=" media-object-section  clearfix">
+      <a href="/workspace/messages/nojs/profile/1426146?team=149481" class=" ctools-use-modal "><img class="round-full small-image-round" style="width: 50px;" src="https://duuciyt57l69v.cloudfront.net/styles/small_thumbnail/s3/default_images/user_avatar_2.png?itok=QA3c5Fci" width="55" height="55" alt="" /></a>    </div>
+    <div class=" media-object-section main-section attribution">
+        <div class="submitted">
+            <p class="commenter-name margin-bottom-0">
+                <span class="proxima-semibold name"><a href="/teacher/jennifer-fraboni" title="View user profile." class="username">Jennifer Fraboni</a></span>
+                <span class="comment-time"> Apr 17, 2018 5:29pm </span>
+            </p>
+        </div>
+
+        <div class="comment-text ">
+
+            
+
+            <div class="m-bottom-20 content">
+                I was wondering how this would play out in my room.  I have students who call out and I would need to give everyone time to share.  I like the idea of turn and talk before calling on individual students.                            </div> <!-- /.content -->
+            <div class="comment-bottom eyebrow">
+            <ul class="links inline"><li class="comment-reply first last"><a href="/comment/reply/272606/1289391/discussion/149481" class="use-ajax-comments ajax-comments-reply ajax-comments-reply-272606-1289391">reply</a></li></ul><span class="flag-wrapper flag-helpful flag-helpful-1289391">
+      <a href="/flag/flag/helpful/1289391?destination=teams/149481/discussions/272606&amp;token=wl7AnLEAqVJWqZZOhskJTE-OopCgC9JxhdaAH5lTsyQ" title="Click the heart to recommend this answer" class="flag flag-action flag-link-toggle button" rel="nofollow"><i class="fa fa-heart-o" aria-hidden="true"></i></a><span class="flag-throbber">&nbsp;</span>
+    </span>
+<span class="no-transform proxima-semibold st-comment st-comment-recommended-1289391">Recommended (<span class="recommended-count-1289391">0</span>)</span>
+
+            </div>
+        </div> <!-- /.comment-text -->
+    </div>
+</div>
+<a id="comment-1289386"></a>
+
+<div class="media-object comment-box comment ajax-comment-wrapper comment-wrapper-1289386" >
+    <div class=" media-object-section  clearfix">
+      <a href="/workspace/messages/nojs/profile/5619146?team=149481" class=" ctools-use-modal "><img class="round-full small-image-round" style="width: 50px;" src="https://duuciyt57l69v.cloudfront.net/styles/small_thumbnail/s3/default_images/user_avatar_2.png?itok=QA3c5Fci" width="55" height="55" alt="" /></a>    </div>
+    <div class=" media-object-section main-section attribution">
+        <div class="submitted">
+            <p class="commenter-name margin-bottom-0">
+                <span class="proxima-semibold name"><a href="/teacher/carolynn-car" title="View user profile." class="username">Carolynn Car</a></span>
+                <span class="comment-time"> Apr 17, 2018 5:29pm </span>
+            </p>
+        </div>
+
+        <div class="comment-text ">
+
+            
+
+            <div class="m-bottom-20 content">
+                Anything you notice in the video that your colleagues might not have noticed
+Elaboration on your colleagues' ideas in the reflection and responses
+A different interpretation about students' thinking
+Any new insights or wonderings about students' arguments
+Anything you saw or read that pushes your thinking about argumentation
+Something you're curious to try in your own classroom after reading the reflection or subsequent responses
+It was interesting watching the video and listening to the children explain their thinking.  My students are currently working on these skills and strategies and I hear similar responses.  
+
+The girl at the end who was defending her explanation clearly has a solid understanding of how division works. She was able to use concrete examples to explain her thinking and continue to explain her thinking when it was challenged and questioned by her peers and teachers.  
+I would be interested in hearing and seeing if children could apply the skill and strategies to a new problem after the class discussion.                            </div> <!-- /.content -->
+            <div class="comment-bottom eyebrow">
+            <ul class="links inline"><li class="comment-reply first last"><a href="/comment/reply/272606/1289386/discussion/149481" class="use-ajax-comments ajax-comments-reply ajax-comments-reply-272606-1289386">reply</a></li></ul><span class="flag-wrapper flag-helpful flag-helpful-1289386">
+      <a href="/flag/flag/helpful/1289386?destination=teams/149481/discussions/272606&amp;token=a02sI4Qq7fdDijhUknnn9kG_gUOsAaxKxHhMYAgGjKU" title="Click the heart to recommend this answer" class="flag flag-action flag-link-toggle button" rel="nofollow"><i class="fa fa-heart-o" aria-hidden="true"></i></a><span class="flag-throbber">&nbsp;</span>
+    </span>
+<span class="no-transform proxima-semibold st-comment st-comment-recommended-1289386">Recommended (<span class="recommended-count-1289386">0</span>)</span>
+
+            </div>
+        </div> <!-- /.comment-text -->
+    </div>
+</div>
+<a id="comment-1289381"></a>
+
+<div class="media-object comment-box comment ajax-comment-wrapper comment-wrapper-1289381" >
+    <div class=" media-object-section  clearfix">
+      <a href="/workspace/messages/nojs/profile/5619141?team=149481" class=" ctools-use-modal "><img class="round-full small-image-round" style="width: 50px;" src="https://www.teachingchannel.org/s3lp/files/styles/small_thumbnail/s3lp/teacher_photos/9231/387/1525198978.jpg?itok=9IUYIesn" width="55" height="55" alt="" /></a>    </div>
+    <div class=" media-object-section main-section attribution">
+        <div class="submitted">
+            <p class="commenter-name margin-bottom-0">
+                <span class="proxima-semibold name"><a href="/teacher/kara-schaper" title="View user profile." class="username">Kara Schaper</a></span>
+                <span class="comment-time"> Apr 17, 2018 5:29pm </span>
+            </p>
+        </div>
+
+        <div class="comment-text ">
+
+            
+
+            <div class="m-bottom-20 content">
+                I agree that I don't think that all of the other students necessarily followed V's explanation as I know I didn't.  However, after watching it a second time, I did understand. Having her word it in another way would be beneficial or by drawing out her thinking.                            </div> <!-- /.content -->
+            <div class="comment-bottom eyebrow">
+            <ul class="links inline"><li class="comment-reply first last"><a href="/comment/reply/272606/1289381/discussion/149481" class="use-ajax-comments ajax-comments-reply ajax-comments-reply-272606-1289381">reply</a></li></ul><span class="flag-wrapper flag-helpful flag-helpful-1289381">
+      <a href="/flag/flag/helpful/1289381?destination=teams/149481/discussions/272606&amp;token=9hZkqD-xwYFY4yYjGDVo17k1WhwHkMfqke7rlUq1b8I" title="Click the heart to recommend this answer" class="flag flag-action flag-link-toggle button" rel="nofollow"><i class="fa fa-heart-o" aria-hidden="true"></i></a><span class="flag-throbber">&nbsp;</span>
+    </span>
+<span class="no-transform proxima-semibold st-comment st-comment-recommended-1289381">Recommended (<span class="recommended-count-1289381">0</span>)</span>
+
+            </div>
+        </div> <!-- /.comment-text -->
+    </div>
+</div>
+<a id="comment-1289376"></a>
+
+<div class="media-object comment-box comment ajax-comment-wrapper comment-wrapper-1289376" >
+    <div class=" media-object-section  clearfix">
+      <a href="/workspace/messages/nojs/profile/5619121?team=149481" class=" ctools-use-modal "><img class="round-full small-image-round" style="width: 50px;" src="https://www.teachingchannel.org/s3lp/files/styles/small_thumbnail/s3lp/teacher_photos/9231/383/1525126984.jpg?itok=TFnqdUVX" width="55" height="55" alt="" /></a>    </div>
+    <div class=" media-object-section main-section attribution">
+        <div class="submitted">
+            <p class="commenter-name margin-bottom-0">
+                <span class="proxima-semibold name"><a href="/teacher/nina-apostolopoulos" title="View user profile." class="username">Nina Apostolopoulos</a></span>
+                <span class="comment-time"> Apr 17, 2018 5:28pm </span>
+            </p>
+        </div>
+
+        <div class="comment-text ">
+
+            
+
+            <div class="m-bottom-20 content">
+                I agree it's difficult to have some of your quieter students speak up and give their thoughts and ideas in front of a group, however, I feel you have a safe classroom environment in which your students feel they can take risks and voice their opinion!                             </div> <!-- /.content -->
+            <div class="comment-bottom eyebrow">
+            <ul class="links inline"><li class="comment-reply first last"><a href="/comment/reply/272606/1289376/discussion/149481" class="use-ajax-comments ajax-comments-reply ajax-comments-reply-272606-1289376">reply</a></li></ul><span class="flag-wrapper flag-helpful flag-helpful-1289376">
+      <a href="/flag/flag/helpful/1289376?destination=teams/149481/discussions/272606&amp;token=oj6eVXucAhn0eW5rfhZ7oiLApiN9cAnfuGpmV7H4VYg" title="Click the heart to recommend this answer" class="flag flag-action flag-link-toggle button" rel="nofollow"><i class="fa fa-heart-o" aria-hidden="true"></i></a><span class="flag-throbber">&nbsp;</span>
+    </span>
+<span class="no-transform proxima-semibold st-comment st-comment-recommended-1289376">Recommended (<span class="recommended-count-1289376">0</span>)</span>
+
+            </div>
+        </div> <!-- /.comment-text -->
+    </div>
+</div>
+<a id="comment-1289371"></a>
+
+<div class="media-object comment-box comment ajax-comment-wrapper comment-wrapper-1289371" >
+    <div class=" media-object-section  clearfix">
+      <a href="/workspace/messages/nojs/profile/5619131?team=149481" class=" ctools-use-modal "><img class="round-full small-image-round" style="width: 50px;" src="https://www.teachingchannel.org/s3lp/files/styles/small_thumbnail/s3lp/teacher_photos/9231/385/1525055879.jpg?itok=YSMXY0Uo" width="55" height="55" alt="" /></a>    </div>
+    <div class=" media-object-section main-section attribution">
+        <div class="submitted">
+            <p class="commenter-name margin-bottom-0">
+                <span class="proxima-semibold name"><a href="/teacher/jessica-pertler" title="View user profile." class="username">Jessica Pertler</a></span>
+                <span class="comment-time"> Apr 17, 2018 5:28pm </span>
+            </p>
+        </div>
+
+        <div class="comment-text ">
+
+            
+
+            <div class="m-bottom-20 content">
+                I was surprised that students were adding the 2's, but not the 80's together.  After someone presented the idea of 80/4 I kept waiting for a student to present 160/4 as a reason for why this was false.  Though this math would not have been correct, I would have understood the logic.                            </div> <!-- /.content -->
+            <div class="comment-bottom eyebrow">
+            <ul class="links inline"><li class="comment-reply first last"><a href="/comment/reply/272606/1289371/discussion/149481" class="use-ajax-comments ajax-comments-reply ajax-comments-reply-272606-1289371">reply</a></li></ul><span class="flag-wrapper flag-helpful flag-helpful-1289371">
+      <a href="/flag/flag/helpful/1289371?destination=teams/149481/discussions/272606&amp;token=pzMooUr1XIc88R77xhTDs6AwU-Y4JCU3Kbu1hJeKVTM" title="Click the heart to recommend this answer" class="flag flag-action flag-link-toggle button" rel="nofollow"><i class="fa fa-heart-o" aria-hidden="true"></i></a><span class="flag-throbber">&nbsp;</span>
+    </span>
+<span class="no-transform proxima-semibold st-comment st-comment-recommended-1289371">Recommended (<span class="recommended-count-1289371">0</span>)</span>
+
+            </div>
+        </div> <!-- /.comment-text -->
+    </div>
+</div>
+<a id="comment-1289366"></a>
+
+<div class="media-object comment-box comment ajax-comment-wrapper comment-wrapper-1289366" >
+    <div class=" media-object-section  clearfix">
+      <a href="/workspace/messages/nojs/profile/5619136?team=149481" class=" ctools-use-modal "><img class="round-full small-image-round" style="width: 50px;" src="https://www.teachingchannel.org/s3lp/files/styles/small_thumbnail/s3lp/teacher_photos/9231/386/1525090289.jpg?itok=LSoxxhFw" width="55" height="55" alt="" /></a>    </div>
+    <div class=" media-object-section main-section attribution">
+        <div class="submitted">
+            <p class="commenter-name margin-bottom-0">
+                <span class="proxima-semibold name"><a href="/teacher/katie-kalnitz" title="View user profile." class="username">Katie Kalnitz</a></span>
+                <span class="comment-time"> Apr 17, 2018 5:27pm </span>
+            </p>
+        </div>
+
+        <div class="comment-text ">
+
+            
+
+            <div class="m-bottom-20 content">
+                I wonder if writing down/drawing some of the kids responses as they shared would have been helpful for some of the more visual learners. The discussion was great--I love how the students had a chance to "defend" their opinion. However, there was a lot of auditory and oral demands on the children and some kids may need some extra supports to be successful. I also like Veronica's idea of encouraging a second turn-and-talk part way through the discussion. I think it would have been effective and students would have had the opportunity to re examine their position.                            </div> <!-- /.content -->
+            <div class="comment-bottom eyebrow">
+            <ul class="links inline"><li class="comment-reply first last"><a href="/comment/reply/272606/1289366/discussion/149481" class="use-ajax-comments ajax-comments-reply ajax-comments-reply-272606-1289366">reply</a></li></ul><span class="flag-wrapper flag-helpful flag-helpful-1289366">
+      <a href="/flag/flag/helpful/1289366?destination=teams/149481/discussions/272606&amp;token=o_8XTy0o1OX1LLQ7J0uo166iAj_vyYpUE7T7jdgFJU8" title="Click the heart to recommend this answer" class="flag flag-action flag-link-toggle button" rel="nofollow"><i class="fa fa-heart-o" aria-hidden="true"></i></a><span class="flag-throbber">&nbsp;</span>
+    </span>
+<span class="no-transform proxima-semibold st-comment st-comment-recommended-1289366">Recommended (<span class="recommended-count-1289366">0</span>)</span>
+
+            </div>
+        </div> <!-- /.comment-text -->
+    </div>
+</div>
+<a id="comment-1289361"></a>
+
+<div class="media-object comment-box comment ajax-comment-wrapper comment-wrapper-1289361" >
+    <div class=" media-object-section  clearfix">
+      <a href="/workspace/messages/nojs/profile/5619156?team=149481" class=" ctools-use-modal "><img class="round-full small-image-round" style="width: 50px;" src="https://www.teachingchannel.org/s3lp/files/styles/small_thumbnail/s3lp/teacher_photos/9231/390/1526756628.jpg?itok=LgS5YQYX" width="55" height="55" alt="" /></a>    </div>
+    <div class=" media-object-section main-section attribution">
+        <div class="submitted">
+            <p class="commenter-name margin-bottom-0">
+                <span class="proxima-semibold name"><a href="/teacher/kellie-cacioppo" title="View user profile." class="username">Kellie Cacioppo</a></span>
+                <span class="comment-time"> Apr 17, 2018 5:27pm </span>
+            </p>
+        </div>
+
+        <div class="comment-text ">
+
+            
+
+            <div class="m-bottom-20 content">
+                Anything you notice in the video that your colleagues might not have noticed
+I observed that the students have a good understanding of the vocabulary for multiplication and division. I also noticed that the girl at the end of the video has a concrete understanding for how to solve the division problem and that there would be no more left after the initial division problem.
+
+Anything you saw or read that pushes your thinking about argumentation
+I liked how the teacher gave opportunities for all "votes" to be heard (thumbs up for true/ thumbs up for false) with solving the problem. Then, she called the other students to be a voice and to piggyback on others and their explanations. I also liked how the went back to the original boy student in the back to see if he still thought it was true. He began to change his mind. 
+
+I would like to provide more opportunities like this to discuss problems that we are working on in class. I would like to do a better job of providing a non-biased response as the students "argue" about whether or not the answer is true or false. Sometimes I am quick to say "Yes, you are right" instead of providing time to ponder.                            </div> <!-- /.content -->
+            <div class="comment-bottom eyebrow">
+            <ul class="links inline"><li class="comment-reply first last"><a href="/comment/reply/272606/1289361/discussion/149481" class="use-ajax-comments ajax-comments-reply ajax-comments-reply-272606-1289361">reply</a></li></ul><span class="flag-wrapper flag-helpful flag-helpful-1289361">
+      <a href="/flag/flag/helpful/1289361?destination=teams/149481/discussions/272606&amp;token=6sUOGISxCPYxICxUd0D-VYR_zLLX9NXh9TqTZZEWJIo" title="Click the heart to recommend this answer" class="flag flag-action flag-link-toggle button" rel="nofollow"><i class="fa fa-heart-o" aria-hidden="true"></i></a><span class="flag-throbber">&nbsp;</span>
+    </span>
+<span class="no-transform proxima-semibold st-comment st-comment-recommended-1289361">Recommended (<span class="recommended-count-1289361">0</span>)</span>
+
+            </div>
+        </div> <!-- /.comment-text -->
+    </div>
+</div>
+<a id="comment-1289356"></a>
+
+<div class="media-object comment-box comment ajax-comment-wrapper comment-wrapper-1289356" >
+    <div class=" media-object-section  clearfix">
+      <a href="/workspace/messages/nojs/profile/5619301?team=149481" class=" ctools-use-modal "><img class="round-full small-image-round" style="width: 50px;" src="https://duuciyt57l69v.cloudfront.net/styles/small_thumbnail/s3/default_images/user_avatar_2.png?itok=QA3c5Fci" width="55" height="55" alt="" /></a>    </div>
+    <div class=" media-object-section main-section attribution">
+        <div class="submitted">
+            <p class="commenter-name margin-bottom-0">
+                <span class="proxima-semibold name"><a href="/teacher/veronica-martinez-16053" title="View user profile." class="username">Veronica Martinez</a></span>
+                <span class="comment-time"> Apr 17, 2018 3:18pm </span>
+            </p>
+        </div>
+
+        <div class="comment-text ">
+
+            
+
+            <div class="m-bottom-20 content">
+                I actually had a different reaction to V’s explanation, Teresa. I’m a little confused by what she said. Suppose someone had written instead, 80/2 = 80/4 + 80/4. V’s reasoning would lead her to say that this is false, which isn’t right. I agree that there is good reasoning in her response that we’d want to emphasize; we just might need to think carefully about which part to emphasize.
+
+Also, Angela, in response to your question about bringing in more voices, I'm wondering whether it would help to do a second turn-and-talk part way through the whole class discussion to let those quieter kids collect their thoughts with their neighbors. Maybe that would make them feel more comfortable entering the conversation afterwards? Has anyone tried that?                            </div> <!-- /.content -->
+            <div class="comment-bottom eyebrow">
+            <ul class="links inline"><li class="comment-reply first last"><a href="/comment/reply/272606/1289356/discussion/149481" class="use-ajax-comments ajax-comments-reply ajax-comments-reply-272606-1289356">reply</a></li></ul><span class="flag-wrapper flag-helpful flag-helpful-1289356">
+      <a href="/flag/flag/helpful/1289356?destination=teams/149481/discussions/272606&amp;token=sfHz2-CG45zz8vXrJtc9MqPB8nK__vAOC47XPa9kOiU" title="Click the heart to recommend this answer" class="flag flag-action flag-link-toggle button" rel="nofollow"><i class="fa fa-heart-o" aria-hidden="true"></i></a><span class="flag-throbber">&nbsp;</span>
+    </span>
+<span class="no-transform proxima-semibold st-comment st-comment-recommended-1289356">Recommended (<span class="recommended-count-1289356">0</span>)</span>
+
+            </div>
+        </div> <!-- /.comment-text -->
+    </div>
+</div>
+<a id="comment-1289351"></a>
+
+<div class="media-object comment-box comment ajax-comment-wrapper comment-wrapper-1289351" >
+    <div class=" media-object-section  clearfix">
+      <a href="/workspace/messages/nojs/profile/5619296?team=149481" class=" ctools-use-modal "><img class="round-full small-image-round" style="width: 50px;" src="https://duuciyt57l69v.cloudfront.net/styles/small_thumbnail/s3/default_images/user_avatar_2.png?itok=QA3c5Fci" width="55" height="55" alt="" /></a>    </div>
+    <div class=" media-object-section main-section attribution">
+        <div class="submitted">
+            <p class="commenter-name margin-bottom-0">
+                <span class="proxima-semibold name"><a href="/teacher/teresa-benson" title="View user profile." class="username">Teresa Benson</a></span>
+                <span class="comment-time"> Apr 17, 2018 3:13pm </span>
+            </p>
+        </div>
+
+        <div class="comment-text ">
+
+            
+
+            <div class="m-bottom-20 content">
+                Hi Angela! Watching your video and reading your reflection was really interesting for me because I had some overlapping experiences with my students. Like you, I wondered about your student who suggested switching the order of the problem. I think you're right that his ideas about the equal sign are a little shaky. Do you think he'd give the same type of response for an equation that is more simple mathematically?
+
+I loved V's explanation! It seems to me that she really has a grasp of the context, even if her actual mathematical representation still has some room for growth. I think that the idea that you've "used up" all the skittles when you compute 80/2 is actually spot on! Yes, as you said, you can divide the answer to 80/2 once again, but in that case you're not starting with a new set of 80 skittles. Once you divide that original 80, you can't start with another set of 80 again. I wonder if there's a way you could help her present this idea visually to help your other students follow her claim. Maybe draw the problem out using smaller numbers? Or, you could just go for it and bring 80 skittles to school! I'm sure you're students wouldn't mind eating them afterwards. :)                            </div> <!-- /.content -->
+            <div class="comment-bottom eyebrow">
+            <ul class="links inline"><li class="comment-reply first last"><a href="/comment/reply/272606/1289351/discussion/149481" class="use-ajax-comments ajax-comments-reply ajax-comments-reply-272606-1289351">reply</a></li></ul><span class="flag-wrapper flag-helpful flag-helpful-1289351">
+      <a href="/flag/flag/helpful/1289351?destination=teams/149481/discussions/272606&amp;token=PrtcEfTg06RiHeW0a5e13SPVKp9jTsO9hAiIvNNBILs" title="Click the heart to recommend this answer" class="flag flag-action flag-link-toggle button" rel="nofollow"><i class="fa fa-heart-o" aria-hidden="true"></i></a><span class="flag-throbber">&nbsp;</span>
+    </span>
+<span class="no-transform proxima-semibold st-comment st-comment-recommended-1289351">Recommended (<span class="recommended-count-1289351">0</span>)</span>
+
+            </div>
+        </div> <!-- /.comment-text -->
+    </div>
+</div>
+</div>  </div>
+  </div>
+<form class="comment-form ajax-comments-reply-form-272606-0-0 ajax-comments-form-add" id="ajax-comments-reply-form-272606-0-0" action="/teams/149481/discussions/272606" method="post" accept-charset="UTF-8"><div><a class="comment attach-resource-btn proxima-bold text-uppercase sprite-plus " data-uniqid="comment" data-open="add_resource_form">Attach Resources</a>
+<div id="resource_attach_wrapper_comment" class="st-resources-section resource-list p-top-30"></div>
+<div class="text-format-wrapper"><div class="form-item form-type-textarea form-item-comment-body-value">
+ <div class="form-textarea-wrapper resizable"><textarea class="ckeditor-mod form-textarea" id="edit-comment-body-value" name="comment_body[value]" cols="80" rows="10"></textarea></div>
+</div>
+<fieldset class="filter-wrapper form-wrapper" id="edit-comment-body-format"><div class="fieldset-wrapper"><div class="form-item form-type-select form-item-comment-body-format">
+  <label for="edit-comment-body-format--2">Text format </label>
+ <select class="filter-list form-select" id="edit-comment-body-format--2" name="comment_body[format]"><option value="full_html">Full HTML</option><option value="filtered_html">Filtered HTML</option><option value="plain_text">Plain text</option><option value="comment_text" selected="selected">Comment Text</option></select>
+</div>
+</div></fieldset>
+</div>
+<input type="hidden" name="form_build_id" value="form-WnEO9WO0k7I54-a-jvNrWz9-YqzLJul0lIL9JgiZFic" />
+<input type="hidden" name="form_token" value="IWCjB7L5fGfc_TVtTSUXRriX1KeDpTrmzhgWPQUENU0" />
+<input type="hidden" name="form_id" value="st_comment_form" />
+<button class=" button form-submit" id="edit-ajax-comments-reply-form-272606-0-0" name="op" value="Submit" type="submit">Submit</button>
+</div></form><div class="reveal small no-padding" id="add_resource_form" data-reveal data-close-on-click="true" data-close-on-esc="true">
+  <div class="modal-header">
+    <span id="modal-title" class="modal-title">Add Resource</span>
+  </div>
+  <div class="resource-add-form p-lr-15 no-border" ng-controller="stResourceAdd" data-gid="1646" data-teamid="149481" data-uid="5379281" data-rtype="attach">
+
+    <div class="p-lr-15">
+      <div data-closable="" class="callout success resource-success" style="display: none;">
+        Resource added successfully.
+        <div class="close-button" aria-label="Dismiss alert" data-close="">
+          <span class="icon-close " aria-hidden="true"></span>
+        </div>
+      </div>
+    </div>
+
+    <form ng-submit="addFormSubmit()" ng-hide="uploading">
+      <div class="row p-top-10">
+        <div class="columns small-12 medium-4 p-tb-15 small-p-tb-0">
+          <h3>What are you sharing?</h3>
+        </div>
+        <div class="columns p-tb-15">
+          <div class="row">
+            <div class="form-radio-item columns shrink small-full-width">
+              <input type="radio" ng-model="form_data.share_type" value="file" class="add-resource-radio-btn" id="share_type_file">
+              <label for="share_type_file">File</label>
+            </div>
+
+            <div class="form-radio-item columns shrink small-full-width">
+              <input type="radio" ng-model="form_data.share_type" value="link" class="add-resource-radio-btn" id="share_type_link">
+              <label for="share_type_link">Link</label>
+            </div>
+
+            <div class="form-radio-item columns shrink small-full-width">
+              <input type="radio" ng-model="form_data.share_type" value="google_doc" class="add-resource-radio-btn" id="share_type_google_doc">
+              <label for="share_type_google_doc">Google Doc</label>
+            </div>
+
+            
+                        <div class="form-radio-item columns shrink small-full-width">
+              <input type="radio" ng-model="form_data.share_type" value="tch_video" class="add-resource-radio-btn" id="share_type_tch_video">
+              <label for="share_type_tch_video">TCH Video</label>
+            </div>
+            
+            <div class="form-radio-item columns shrink small-full-width">
+              <input type="radio" ng-model="form_data.share_type" value="existing_resource" class="add-resource-radio-btn" id="share_type_existing_resource">
+              <label for="share_type_existing_resource">Existing Resource</label>
+            </div>
+
+            <small class="form-error m-top-10 columns small-12" ng-class="{'is-visible': form_error.share_type == 1}">Please select a share type.</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="resource-add-bottom-section" ng-class="{'ng-hide': form_data.share_type == 'existing_resource' || form_data.share_type == 'tch_video'}">
+        <div class="row">
+          <div class="columns">
+            <div class="form-item" ng-class="{'ng-hide': form_data.share_type != 'file' && form_data.share_type != 'captivate'}">
+              <span ng-if="form_data.share_type == 'file'">
+                <input type="file" ngf-select ng-model="form_data.file" ngf-model-invalid="file_error" ngf-accept="'image/*,application/pdf,video/*,.mov,.3gp,.m4v,.flv,.avi,.wmv,.doc,.docx,.pps,.ppt,.pptx,.xls,.xlsx'" ngf-pattern="'.pdf,.png,.jpg,.jpeg,.mp4,.mov,.3gp,.m4v,.flv,.avi,.wmv,.doc,.docx,.pps,.ppt,.pptx,.xls,.xlsx'">
+                <small>When uploading a video, please ensure your file is in .mp4, .mov, .avi or .flv format.</small>
+              </span>
+              <span ng-if="form_data.share_type == 'captivate'">
+                <input type="file" ngf-select ng-model="form_data.file" ngf-model-invalid="file_error" ngf-accept="'.zip'" ngf-pattern="'.zip'">
+              </span>
+              <small class="hide">Supported file formats: .pdf, .png, .jpg, .jpeg, .mp4, .mov, .doc, .docx, .pps, .ppt, .pptx, .xls, .xlsx</small>
+              <small class="form-error" ng-class="{'is-visible': form_error.file == 1}">File required.</small>
+              <small class="form-error" ng-class="{'is-visible': form_error.file == 2}">Invalid File.</small>
+            </div>
+
+            <div class="form-item" ng-class="{'ng-hide': form_data.share_type != 'link' && form_data.share_type != 'google_doc'}">
+              <input type="text" ng-model="form_data.link" placeholder="Paste the link here">
+              <small class="form-error" ng-class="{'is-visible': form_error.link == 1}">Link required.</small>
+            </div>
+
+            <div class="form-item">
+              <input type="text" ng-model="form_data.title" placeholder="Title *">
+              <small class="form-error" ng-class="{'is-visible': form_error.title == 1}">Title field is required.</small>
+            </div>
+
+            <div class="form-item">
+              <textarea ng-model="form_data.description" placeholder="Description" rows="5"></textarea>
+              <small class="form-error" ng-class="{'is-visible': form_error.description == 1}">Description field is required.</small>
+            </div>
+
+            <div class="form-item flex-container align-middle">
+                                          <div class="margin-right-1">
+                <input id="res_d" type="checkbox" ng-model="form_data.resource_type.district" value="1">
+                <label for="res_d">Add to NUSESP resources</label>
+              </div>
+                                          <div class="margin-right-1">
+                <input id="res_o" type="checkbox" ng-model="form_data.resource_type.official" value="1">
+                <label for="res_o">Official</label>
+              </div>
+                          </div>
+          </div>
+        </div>
+        <div class="row columns"><hr></div>
+        <div class="row align-justify margin-bottom-1">
+          <div class="small-12 medium-6 columns">
+            <h3>Choose Global Tags</h3>
+            <div class="form-item multi-type-3" id="id_select_topics_wrapper">
+              <label for="id_select_topics">Topics</label>
+              <select id="id_select_topics" ng-model="form_data.topics" multiple="multiple">
+                              <option value="185361">Assessment</option>
+                              <option value="185856">Class Culture</option>
+                              <option value="185906">Coaching</option>
+                              <option value="234821">Common Core</option>
+                              <option value="186246">Differentiation</option>
+                              <option value="186721">Engagement</option>
+                              <option value="186741">English Language Learners</option>
+                              <option value="217231">Lesson Planning</option>
+                              <option value="188141">New Teachers</option>
+                              <option value="188166">Next Generation Science Standards</option>
+                              <option value="217246">Professional Learning</option>
+                              <option value="217251">Technology in the Classroom</option>
+                            </select>
+            </div>
+            <div class="form-item multi-type-3" id="id_select_subjects_wrapper">
+              <label for="id_select_subjects">Subject</label>
+              <select id="id_select_subjects" ng-model="form_data.subjects" multiple="multiple">
+                              <option value="185341">Arts</option>
+                              <option value="186736">English Language Arts</option>
+                              <option value="187831">Math</option>
+                              <option value="189046">Science</option>
+                              <option value="189211">Social Studies</option>
+                            </select>
+            </div>
+            <div class="form-item multi-type-3" id="id_select_grades_wrapper">
+              <label for="id_select_grades">Grade</label>
+              <select id="id_select_grades" ng-model="form_data.grades" multiple="multiple">
+                              <option value="188726">Pre-K</option>
+                              <option value="187531">Kindergarten</option>
+                              <option value="183956">1</option>
+                              <option value="184346">2</option>
+                              <option value="184556">3</option>
+                              <option value="184751">4</option>
+                              <option value="184966">5</option>
+                              <option value="185066">6</option>
+                              <option value="185096">7</option>
+                              <option value="185116">8</option>
+                              <option value="185136">9</option>
+                              <option value="184116">10</option>
+                              <option value="184146">11</option>
+                              <option value="184161">12</option>
+                              <option value="60306">13</option>
+                              <option value="6216">N/A</option>
+                            </select>
+            </div>
+          </div>
+
+          <div class="medium-6 columns">
+            <h3>Choose District Tags</h3>
+                          <div class="form-item multi-type-3" id="id_select_org_topics_wrapper">
+                <label for="id_select_org_topics">My District</label>
+                <select id="id_select_org_topics" ng-model="form_data.district_topics" multiple="multiple">
+                                        <optgroup label="Courses">
+                                                  <option value="186636">Educational Coaching Network</option>
+                                            </optgroup>
+                                  </select>
+              </div>
+                      </div>
+        </div>
+        <div class="row">
+          <div class="columns">
+            <hr class="margin-bottom-3">
+          </div>
+        </div>
+        <div class="flex-container align-center">
+          <input type="button" class="button large m-right-gutter-half" value="Cancel" ng-click="closeCreateNewResource()" />
+          <input type="submit" class="button large" value="Save"/>
+        </div>
+      </div>
+    </form>
+
+    <div class="uploading-progress p-tb-30" ng-show="uploading">
+      <h5>Uploading...</h5>
+      <div class="progress warning">
+        <span class="progress-meter" style="width: 0%">
+          <p class="progress-meter-text"></p>
+        </span>
+      </div>
+    </div>
+
+    <button class="create-new-resource-close ng-hide" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+  </div>
+
+  <!-- Existing resource section -->
+  <div class="existing-resource-list-section padding-left-2 padding-right-2">
+    <div class="resource-search">
+      <form action="/" method="get" id="views-exposed-form-resources-panel-pane-1" accept-charset="UTF-8"><div><div class="views-exposed-form">
+  <div class="views-exposed-widgets clearfix">
+          <div id="edit-combine-wrapper" class="views-exposed-widget views-widget-filter-combine">
+                        <div class="views-widget">
+          <div class="form-item form-type-textfield form-item-combine">
+ <input type="text" id="edit-combine" name="combine" value="" size="30" maxlength="128" class="form-text" />
+</div>
+        </div>
+              </div>
+                    <div class="views-exposed-widget views-submit-button">
+      <button id="edit-submit-resources" name="" value="Apply" type="submit" class="form-submit">Apply</button>
+    </div>
+      </div>
+</div>
+</div></form>    </div>
+
+    <div class="existing-resource-add-form margin-bottom-0" ng-controller="stExistingResourceAdd" data-gid="1646" data-teamid="149481" data-uid="5379281" data-rtype="attach">
+      <h4>Add Existing Resource</h4>
+      <form ng-submit="ExistingResourceFormSubmit()">
+
+        <div class="view view-resources view-id-resources view-display-id-panel_pane_1 view-row-separator view-dom-id-20b74bcf5780859780fdbdbeb31d42c3">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    
+<div class="row pos-rel align-middle file-resource-row existing-resource-row bg-gray-f4 padding-top-1 padding-bottom-1 r-row-935561" id="existing_resource_935561" data-resource_id="935561" data-title="Cacioppo final week" data-type="video" data-entity_type="file" data-euid="5619156" data-resource_list_image_uri="https://www.teachingchannel.org/s3/files/styles/resource_list/s3/media-jwplatform/t0p6aEkQ.jpg?itok=0-NyyEFr">
+  <div class="columns shrink">
+    <div class="medium-icon text-center">
+              <i class="icon-video"></i>
+          </div>
+  </div>
+  
+  <div class="columns">
+    <div class="capitalize">video</div>
+    <div class="title">Cacioppo final week</div>
+    <div>Saved to group July 08, 2018</div>
+    <div class="overflow-hidden">Uploaded by kcacioppo@dps109.org</div>
+  </div>
+  <div class="ng-hide select-status" id="is_selected_935561">Selected <i class="icon-link"></i></div>
+</div>
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    
+<div class="row pos-rel align-middle file-resource-row existing-resource-row bg-gray-f4 padding-top-1 padding-bottom-1 r-row-935546" id="existing_resource_935546" data-resource_id="935546" data-title="Untitled Video" data-type="video" data-entity_type="file" data-euid="5619151" data-resource_list_image_uri="https://www.teachingchannel.org/s3/files/styles/resource_list/s3/media-jwplatform/7ZkgMFhm.jpg?itok=_orvBzi1">
+  <div class="columns shrink">
+    <div class="medium-icon text-center">
+              <i class="icon-video"></i>
+          </div>
+  </div>
+  
+  <div class="columns">
+    <div class="capitalize">video</div>
+    <div class="title">Untitled Video</div>
+    <div>Saved to group July 08, 2018</div>
+    <div class="overflow-hidden">Uploaded by krallis@dps109.org</div>
+  </div>
+  <div class="ng-hide select-status" id="is_selected_935546">Selected <i class="icon-link"></i></div>
+</div>
+  </div>
+  <div class="views-row views-row-3 views-row-odd views-row-last">
+    
+<div class="row pos-rel align-middle file-resource-row existing-resource-row bg-gray-f4 padding-top-1 padding-bottom-1 r-row-935251" id="existing_resource_935251" data-resource_id="935251" data-title="Week5Pertler" data-type="video" data-entity_type="file" data-euid="5619131" data-resource_list_image_uri="https://www.teachingchannel.org/s3/files/styles/resource_list/s3/media-jwplatform/hWDSuDnc.jpg?itok=XPBcyIh8">
+  <div class="columns shrink">
+    <div class="medium-icon text-center">
+              <i class="icon-video"></i>
+          </div>
+  </div>
+  
+  <div class="columns">
+    <div class="capitalize">video</div>
+    <div class="title">Week5Pertler</div>
+    <div>Saved to group July 08, 2018</div>
+    <div class="overflow-hidden">Uploaded by jpertler@dps109.org</div>
+  </div>
+  <div class="ng-hide select-status" id="is_selected_935251">Selected <i class="icon-link"></i></div>
+</div>
+  </div>
+    </div>
+  
+      <div class="item-list item-list-pager"><ul class="pager pager-show-more"><li class="pager-show-more-next even first last"><a href="/teams/149481/discussions/272606?page=1">Show more</a></li></ul></div>  
+  
+  
+  
+  
+</div>
+        <div class="flex-container align-center">
+          <input type="button" class="button large m-right-gutter-half " value="Cancel" ng-click="closeExistingResource()" />
+          <input type="submit" class="button large" value="Attach"/>
+        </div>
+      </form>
+    </div>
+
+    <button class="add-existing-resource-close ng-hide" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <!-- TCH Video Section -->
+      <div class="tch-video-list-section padding-left-2 padding-right-2">
+      <div class="resource-search">
+      <form action="/" method="get" id="views-exposed-form-tch-video-panel-pane-1" accept-charset="UTF-8"><div><div class="views-exposed-form">
+  <div class="views-exposed-widgets clearfix">
+          <div id="edit-combine-wrapper" class="views-exposed-widget views-widget-filter-combine">
+                        <div class="views-widget">
+          <div class="form-item form-type-textfield form-item-combine">
+ <input type="text" id="edit-combine" name="combine" value="" size="30" maxlength="128" class="form-text" />
+</div>
+        </div>
+              </div>
+                    <div class="views-exposed-widget views-submit-button">
+      <button id="edit-submit-tch-video" name="" value="Search" type="submit" class="form-submit">Search</button>
+    </div>
+      </div>
+</div>
+</div></form>      </div>
+      <div class="tch-video-add-form margin-bottom-0" ng-controller="stTchVideoAdd" data-gid="1646" data-teamid="149481" data-uid="5379281" data-rtype="attach">
+        <h4>TCH Video</h4>
+        <form ng-submit="TchVideoFormSubmit()">
+          <div class="view view-tch-video view-id-tch_video view-display-id-panel_pane_1 view-id-resources view-row-separator view-dom-id-d094d6ef4fb122cc9a2d2c2ebd76719b">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    
+<div class="existing-resource-row row pos-rel align-middle tch-video-row bg-gray-f4 padding-top-1 padding-bottom-1 r-row-178276" id="tch_video_178276" data-resource_id="178276" data-title="Three Ways to Encourage Student Collaboration " data-type="video" data-entity_type="video" data-euid="67071" data-resource_list_image_uri="https://duuciyt57l69v.cloudfront.net/styles/video_thumb/s3/images/video/poster/tt_016-d-.jpg?itok=07zogkzo">
+  <div class="columns shrink">
+    <div class="medium-icon text-center">
+      <i class="icon-video"></i>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div class="capitalize">Video</div>
+    <div class="title">Three Ways to Encourage Student Collaboration </div>
+    <div>Saved to group October 05, 2018</div>
+    <div class="overflow-hidden">Uploaded by greg marasso</div>
+  </div>
+  <div class="ng-hide select-status" id="is_selected_178276">Selected <i class="icon-link"></i></div>
+</div>
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    
+<div class="existing-resource-row row pos-rel align-middle tch-video-row bg-gray-f4 padding-top-1 padding-bottom-1 r-row-179341" id="tch_video_179341" data-resource_id="179341" data-title="Five Ways to Start Your Lessons" data-type="video" data-entity_type="video" data-euid="67071" data-resource_list_image_uri="https://duuciyt57l69v.cloudfront.net/styles/video_thumb/s3/images/video/poster/tt_020-c.jpg?itok=0Te-kZ9l">
+  <div class="columns shrink">
+    <div class="medium-icon text-center">
+      <i class="icon-video"></i>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div class="capitalize">Video</div>
+    <div class="title">Five Ways to Start Your Lessons</div>
+    <div>Saved to group September 28, 2018</div>
+    <div class="overflow-hidden">Uploaded by greg marasso</div>
+  </div>
+  <div class="ng-hide select-status" id="is_selected_179341">Selected <i class="icon-link"></i></div>
+</div>
+  </div>
+  <div class="views-row views-row-3 views-row-odd views-row-last">
+    
+<div class="existing-resource-row row pos-rel align-middle tch-video-row bg-gray-f4 padding-top-1 padding-bottom-1 r-row-179326" id="tch_video_179326" data-resource_id="179326" data-title="Three Ways to Practice Goal Setting with Your Students " data-type="video" data-entity_type="video" data-euid="67071" data-resource_list_image_uri="https://duuciyt57l69v.cloudfront.net/styles/video_thumb/s3/images/video/poster/tt_017-f.jpg?itok=hEXtj64o">
+  <div class="columns shrink">
+    <div class="medium-icon text-center">
+      <i class="icon-video"></i>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div class="capitalize">Video</div>
+    <div class="title">Three Ways to Practice Goal Setting with Your Students </div>
+    <div>Saved to group September 28, 2018</div>
+    <div class="overflow-hidden">Uploaded by greg marasso</div>
+  </div>
+  <div class="ng-hide select-status" id="is_selected_179326">Selected <i class="icon-link"></i></div>
+</div>
+  </div>
+    </div>
+  
+      <div class="item-list item-list-pager"><ul class="pager pager-show-more"><li class="pager-show-more-next even first last"><a href="/teams/149481/discussions/272606?page=1">Show more</a></li></ul></div>  
+  
+  
+  
+  
+</div>
+          <div class="flex-container align-center">
+            <input type="button" class="button large m-right-gutter-half " value="Cancel" ng-click="closeTchVideo()" />
+            <input type="submit" class="button large" value="Attach"/>
+          </div>
+        </form>
+      </div>
+
+      <button class="tch-video-close ng-hide" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  
+</div>
+
+<div class="reveal tiny" id="postToTeamModal" data-reveal>
+  <div class="post-to-team-form padding-1" ng-controller="postToTeam" data-gid="1646" data-uid="5379281">
+    <h4>Share with a Team</h4>
+
+    <div data-closable="" class="callout success post-to-team-success" style="display: none;">
+      <div class="mesg">Post to a team successfully completed.</div>
+      <div class="close-button" aria-label="Dismiss alert" data-close="">
+        <span aria-hidden="true">×</span>
+      </div>
+    </div>
+
+    <form ng-submit="postFormSubmit()">
+      <div class="form-item" ng-init='team_list = [{"id":107496,"name":"Sample Groups: Analyzing Video with the Learning Plan"},{"id":107526,"name":"NUSESP Site Administrators Documentation"},{"id":107536,"name":"MSED: Instructional Coaching"},{"id":107666,"name":"Secondary Social Studies"},{"id":107686,"name":"Video Club Activity - Julie, Chris and Stacy"},{"id":107691,"name":"Ted and Zach"},{"id":107701,"name":"Elementary Education Group"},{"id":107961,"name":"Educational Coaching Network"},{"id":112331,"name":"Teacher Thinking and Learning, F2015"},{"id":113686,"name":"John\u0027s Invite Only Group"},{"id":115276,"name":"12 OnCampus: Honaker, Legendre, Purcell Video Group"},{"id":115286,"name":"Online 1 Concept Grp: Greg Brown, Michelle Shepard, Amy Strohsack"},{"id":115291,"name":"14 OnCampus: Max, Chris and Becky"},{"id":115326,"name":"01 OnCampus Grp: Ashlyn, Kyla, Jennifer R, \u0026 Frank"},{"id":115336,"name":"10 OnCampus Grp: Scott Gollan, John Mehnert, Mary Jo Houck"},{"id":115446,"name":"07 OnCampus: Amy Schneider, Kristin Flores, and Beth Manning"},{"id":115556,"name":"Online 4 Concept Schools Team: Amy, Dennis, Emily"},{"id":115956,"name":"08 OnCampus: Kirk Greer, Barbara Zarras, Farisa Hussain"},{"id":116071,"name":"02 OnCampus Coaching Team: (Felix, Fiona, Jen, Fatih)"},{"id":116081,"name":"05 OnCampus: Vedziovski, Diorio, Hellstrom"},{"id":116111,"name":"11 OnCampus Group: (McEvoy, Melie, Meltzer)"},{"id":117071,"name":"Online 3 Concept Schools Group: Kelli, Kendra, Christianna, Serpil"},{"id":117541,"name":"13 OnCampus Coaching Group Lucky 13 (Augustinsky, Huber, Nabers)"},{"id":117941,"name":"Online 2 Concepts Grp: Cindi Barone-Boyer, Lisa Bender, Crystal Bielmeier, Michelle Magner"},{"id":117946,"name":"Online 5 Concepts Grp: Lea Hammond, Joyce Lewis, April Maimone"},{"id":117951,"name":"Online 6 Concepts Grp: Janet Moak, Esther Mossing, Marvin Rice"},{"id":117956,"name":"Online 7 Concepts Grp: Emily Johnson, Lynda MacQuarrie, Barbara Mancher"},{"id":117961,"name":"Online 8: Maggie Greene, Mustafa Icel, Leah Wolfert"},{"id":117966,"name":"Online 9 Concepts Grp: Allison Benner, Kellie Berlean, Adam Peteron"},{"id":117971,"name":"03 OnCampus Grp: Elizabeth Arendziak, Amanda August, Tami Sanders"},{"id":117976,"name":"04 OnCampus Grp: Eileen Cetera, Elizabeth Denevi, Laura Golden"},{"id":117981,"name":"06 OnCampus Grp: Marsha Dragonetti, Benita Johnson, Craig Keer"},{"id":117986,"name":"09 OnCampus: Ellen Correll, Abigail Dye, Pam McCarthy"},{"id":120616,"name":"Mershon"},{"id":121666,"name":"MSED 451-0-20 Understanding Teacher Development and Growth (Summer 2016)"},{"id":121931,"name":"MSED 451 Using Video I (Summer 2016)"},{"id":121961,"name":"Elementary Math MSED 451"},{"id":121966,"name":"MSED 451 Science Group"},{"id":121971,"name":"Coaches Team"},{"id":121976,"name":"English Group"},{"id":122451,"name":"MSED 451 Using Video II (Summer 2016)"},{"id":122571,"name":"Stacy and Staci"},{"id":138286,"name":"MSED 451 Using Video I (Summer 2017)"},{"id":138291,"name":"MSED 451 Using Video II (Summer 2017)"},{"id":149281,"name":"v2 MASTER Argumentation in Mathematics Course"},{"id":149481,"name":"Chicago Area Argumentation in Mathematics Course"},{"id":171771,"name":"Using Video 1 - Summer 2018"},{"id":172346,"name":"Using Video 2 - Summer 2018"},{"id":174951,"name":"Coaching New Teachers"}]'>
+        <select name="team_select" id="team_select" ng-model="form_data.team_select">
+          <option value="" disabled selected>Select team</option>
+          <option ng-repeat="option in team_list" value="{{option.id}}">{{option.name}}</option>
+        </select>
+      </div>
+      <div class="form-item">
+        <small class="form-error" ng-class="{'is-visible': form_error.team_select == 1}">Team field is required.</small>
+      </div>
+
+
+      <div class="form-item">
+        <input id="create_discussion_in_team" type="checkbox" ng-model="form_data.create_discussion" ng-click="createDiscussionInTeam()">
+        <label for="create_discussion_in_team">Create a Discussion in Team and Notify Members</label>
+      </div>
+
+      <div class="form-item hide team-discussion-topic-section row collapse medium-uncollapse">
+        <div class="columns small-2 small-shrink resource-avater">
+          <div class="m-right-gutter-half small-image-round">
+                        <img class="round-full image-style-small-thumbnail" src="https://www.teachingchannel.org/s3lp/files/styles/small_thumbnail/s3lp/teacher_photos/9174/221/1523992364.jpg?itok=BJxFK3zB" width="55" height="55" alt="" />                      </div>
+        </div>
+        <div class="columns">
+          <textarea ng-model="form_data.discussion_topic" placeholder="Discussion Detail" rows="5" ng-disabled="discussionDisabled"></textarea>
+          <small class="form-error" ng-class="{'is-visible': form_error.discussion_topic == 1}">Discussion Topic field is required.</small>
+        </div>
+      </div>
+
+      <div class="flex-container align-center">
+        <input type="button" class="button medium medium-flex-child-auto" value="Cancel" ng-click="closePostToTeam()" />
+        <input type="submit" class="button medium medium-flex-child-auto" value="Post"/>
+      </div>
+    </form>
+  </div>
+
+  <button class="post-to-team-close ng-hide" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+
+</div>
+  </div>
+</div>
+  </div>
+
+  
+  </div>
+    </div>
+  </div>
+
+    </div>
+          </div>
+        <!--/.l-main region -->
+
+        
+              </main>
+      <!--/.l-main -->
+
+      <!--.l-footer -->
+      <footer class="l-footer" role="contentinfo">
+        <div class="bg-light-gray"  >
+          <div class="row">
+            <div class="columns">
+              <div class="question-box-wrapper pos-rel row hide-for-small-only">
+                <div class="columns">
+                  <a href="/question" class="question-box">
+                    <div class="bg-orange round-full"><i class="fa fa-question" aria-hidden="true"></i></div>
+                    <div class="question-text uppercase bg-orange color-white">
+                      <span>Questions? Need Advice? Click here!</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="footer-content">
+                                  <!--.footer-columns -->
+                  <section class="row top-footer position-relative">
+                                          <div class="footer-first columns small-12 medium-12 large-6 footer-spacer">
+                        <div class="footer-first-content">  <div id='sendgrid-modal-form'><section class="block block-sendgrid-newsletter odd first block-count-2 block-region-footer-firstcolumn block-sendgrid-newsletter-block">
+  
+        <h2 class="block-title">NEWSLETTER SIGNUP</h2>
+    
+  <div  class="block-content content">  <form action="/teams/149481/discussions/272606" method="post" id="sendgrid-newsletter-block-form" accept-charset="UTF-8"><div><input type="hidden" name="sendgrid_signup_first_name" value="" />
+<input type="hidden" name="sendgrid_signup_last_name" value="" />
+<div class="form-item form-type-textfield form-item-sendgrid-signup-email">
+ <input type="text" id="edit-sendgrid-signup-email" name="sendgrid_signup_email" value="" size="60" maxlength="255" class="form-text required" />
+</div>
+<button id="edit-submit" name="op" value="SUBSCRIBE" type="submit" class="form-submit">SUBSCRIBE</button>
+<input type="hidden" name="form_build_id" value="form-Kttxcft9UjSJskC5x8oud3taNKkq730nQgepYLgu8q8" />
+<input type="hidden" name="form_token" value="OiB-daXHlFcWCZKjHLrBORtbDlb2-TxvuSbzJCKlpvA" />
+<input type="hidden" name="form_id" value="sendgrid_newsletter_block_form" />
+</div></form>  </div>
+  </section></div><section class="block block-st-white-label no-title even last block-count-3 block-region-footer-firstcolumn block-footer-logo-text">
+  
+      
+  <div  class="block-content content">  <div class="site-logo"><a href='/'><img src='https://www.teachingchannel.org/sites/all/themes/sloth/logo.svg'></a></div>
+<p>Teaching Channel is a thriving online community where teachers can watch, share, and learn diverse techniques to help every student grow.</p>
+  </div>
+  </section></div>
+                      </div>
+                                                              <div class="footer-second columns small-12 medium-12 large-6 footer-spacer">
+                          <section class="block block-st-white-label no-title odd first last block-count-4 block-region-footer-secondcolumn block-footer-menu">
+  
+      
+  <div  class="block-content content">    <ul class="menu vertical clearfix"><li class="first leaf menu-depth-1 menu-item-11806"><a href="/teaching-channels-mission">Our Mission</a></li><li class="leaf menu-depth-1 menu-item-2319"><a href="/story">About Us</a></li><li class="leaf menu-depth-1 menu-item-2320"><a href="/tchplus">TCH plus for Districts</a></li><li class="leaf menu-depth-1 menu-item-2321"><a href="/license">License Our Videos</a></li><li class="leaf menu-depth-1 menu-item-2322"><a href="/advertise-us">Advertise With Us</a></li><li class="leaf menu-depth-1 menu-item-2323"><a href="/media">Media</a></li><li class="leaf menu-depth-1 menu-item-2324"><a href="/faq">Frequently Asked Questions</a></li><li class="leaf menu-depth-1 menu-item-2325"><a href="/job-opportunities">Job Opportunities</a></li><li class="leaf menu-depth-1 menu-item-2326"><a href="/terms">Terms and Conditions</a></li><li class="leaf menu-depth-1 menu-item-2327"><a href="/privacy">Privacy Policy</a></li><li class="leaf menu-depth-1 menu-item-2331"><a href="/contact">Contact Us</a></li><li class="last leaf menu-depth-1 menu-item-3141"><a href="/blog">Blog</a></li></ul>  </div>
+  </section>                      </div>
+                                      </section>
+                  <!--/.footer-columns-->
+                
+                
+                                    <div class="row bottom-footer align-bottom">
+                                              <div class="large-9 medium-6 small-12 columns"><div class="copyright">Copyright &copy; 2019.</div></div>
+                      
+                                              <div class="large-3 medium-6 small-12 columns small-order-first">
+                          <ul class="social-links no-bullet ">
+                                                          <li class="social-item facebook">
+                                <a class="fa fa-facebook" href="https://www.facebook.com/teachingchannel" target="_blank"><span class="hide">facebook</span></a>
+                              </li>
+                                                          <li class="social-item twitter">
+                                <a class="fa fa-twitter" href="https://twitter.com/teachingchannel" target="_blank"><span class="hide">twitter</span></a>
+                              </li>
+                                                          <li class="social-item pintrest">
+                                <a class="fa fa-pinterest" href="https://www.pinterest.com/teachingchannel" target="_blank"><span class="hide">pintrest</span></a>
+                              </li>
+                                                      </ul>
+                        </div>
+                                          </div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!--/.l-footer -->
+    </div>
+
+  </div>
+</div>
+<!--/.page -->
+  <!-- Start of teachingchannel Zendesk Widget script -->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=8cbd7639-4c34-4b67-acfd-69816246d0f2"> </script>
+<script>
+var name = 'Mari Altshuler';
+if(name != 'Anonymous') {
+zE(function() {
+    zE.identify({
+      name: name,
+      email: 'marialtshuler2023@u.northwestern.edu'
+    });
+  });
+}
+</script>
+<!-- End of teachingchannel Zendesk Widget script --><script src="//cdn.ckeditor.com/4.9.1/full-all/ckeditor.js"></script>
+<script src="/sites/default/files/advagg_js/js__pQH-D4P_VOTTuhJYNhUycyWOERtqG4blS1tLJoAXiJM__h9ZX0pQoKSNL3UbbiIR6yA7e1Xl4ukzPwuKAcBj-yoA__oQYHT4KO3jC4DGNzCtRJAUYZzwWpmvEPa_CbUdU1VkI.js"></script>
+<script src="/sites/default/files/advagg_js/js__9zz8GRtw9fg8lJFoLMIe7ol7Hsq9qRdwGMoy5yd560U__1kL8FbuQfZbDhbkv4lo-K2sgVZLmIzPR43u0Ktd0PfE__oQYHT4KO3jC4DGNzCtRJAUYZzwWpmvEPa_CbUdU1VkI.js"></script>
+<script src="/sites/default/files/advagg_js/js__zJGNCQRrQX4D3RURShjcPyMhcsWn0DcG0RIE1e7lbMo__HzriHfiGRio8aG6OAvlPHhJkVUtUR3GLmhFQB7MJq1o__oQYHT4KO3jC4DGNzCtRJAUYZzwWpmvEPa_CbUdU1VkI.js"></script>
+<script src="/sites/default/files/advagg_js/js__8aBtTfMnUWewHMF_IfnTncuNcKddzn29ESeyZIsug9Y__pLUUPn60oIn9VKxs-nxMYby57oXi_VTdeXfT5fMwxNo__oQYHT4KO3jC4DGNzCtRJAUYZzwWpmvEPa_CbUdU1VkI.js"></script>
+<script src="/sites/default/files/advagg_js/js__VP8hctRavprAw82Qh-gNdiEcVDljGumlBdWAzx5jqfA__HaSEq_92PoRpPQkhDwYe7qCpBSZOIB3MjGO7InUFSk4__oQYHT4KO3jC4DGNzCtRJAUYZzwWpmvEPa_CbUdU1VkI.js"></script>
+<script src="/sites/default/files/advagg_js/js__9gUKgtYGmf59Ztc7YVeovo5qBP2yo3wskkQzSmMF6fQ__UnYh4OQAljAVd5_WQ8lmR12YQkArm_9TWdEbaEbGbzs__oQYHT4KO3jC4DGNzCtRJAUYZzwWpmvEPa_CbUdU1VkI.js"></script>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"79c76a1214","applicationID":"121671702","transactionName":"Zl1SYEtUXktTUUxZWF8XcVdNXF9WHUJZV1JuVVFaWFJVSm1CWVdSbl1IUVpARF0=","queueTime":0,"applicationTime":1157,"atts":"ShpRFgNOTUU=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
