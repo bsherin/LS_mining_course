@@ -2,8 +2,13 @@
 
 Get the notebooks that start with **W6**.
 
-One new list: stoplist3k2sw.txt
-One new corpus file: student_questions.txt
+One new list: 
+
+* stoplist3k2sw.txt
+
+One new corpus file: 
+
+* student_questions.txt
 
 # For week 5
 
