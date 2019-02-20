@@ -1,3 +1,10 @@
+# For week 6
+
+Get the notebooks that start with **W6**.
+
+One new list: stoplist3k2sw.txt
+One new corpus file: student_questions.txt
+
 # For week 5
 
 There is a new numbering scheme for notebooks. You want all of the notebooks that start with **W5**.
