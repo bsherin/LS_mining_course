@@ -1,3 +1,12 @@
+# For week 7
+
+Get the notebooks that start with **W7**.
+
+And there are two new libraries to install:
+
+* pyldavis
+* wikipediaapi
+
 # For week 6
 
 Get the notebooks that start with **W6**.
