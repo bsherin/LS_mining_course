@@ -1,3 +1,7 @@
+# For week 8
+
+Just all of the notebooks that start with **w8**.
+
 # For week 7
 
 Get the notebooks that start with **W7**.
