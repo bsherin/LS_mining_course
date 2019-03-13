@@ -1,3 +1,11 @@
+# For week 9
+
+All of the notebooks that start with **W9**. 
+
+Plus you'll want the folder **network_data**.
+
+You can also download and install Gephi (https://gephi.org). We'll be using it to view some networks.
+
 # For week 8
 
 Just all of the notebooks that start with **w8**.
