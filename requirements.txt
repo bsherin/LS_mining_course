@@ -14,5 +14,6 @@ regex
 scipy
 scikit-learn
 tweepy
+wikipedia_api
 wordcloud
 yellowbrick
