@@ -1,4 +1,3 @@
-git+https://github.com/pylangacq/pylangacq.git
 beautifulsoup4
 fuzzywuzzy
 gensim
