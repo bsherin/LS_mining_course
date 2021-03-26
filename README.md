@@ -173,5 +173,5 @@ sh launch_notebook.sh
 
 # To launch in binder:
 
-https://mybinder.org/v2/gh/bsherin/LS_mining_course.git/master
+https://mybinder.org/v2/gh/bsherin/LS_mining_course.git/master?urlpath=lab
 
